@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             theme: ThemeData(
                 appBarTheme: AppBarTheme(color: Color(0xffE7EAEF)),
-               
                 fontFamily: GoogleFonts.tenorSans().fontFamily),
             debugShowCheckedModeBanner: false,
             home: HomePage(),

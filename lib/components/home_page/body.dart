@@ -1,4 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'home_banner.dart';
+import 'new_arrival.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -7,9 +13,21 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Image.asset('images/Banner (1).png'),
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeBanner(),
+            SizedBox(height: 27.h),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),
+              child: SizedBox(
+                child: NewArrival(),
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
