@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class Brands extends StatelessWidget {
+  const Brands({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(child: Image.asset('images/3.png')),
+        SizedBox(height: 39.h),
+        SizedBox(
+          width: double.infinity,
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            runSpacing: 28.h,
+            spacing: 38.w,
+            children: [
+              Image.asset('images/Prada.png'),
+              Image.asset('images/Burberry.png'),
+              Image.asset('images/Boss.png'),
+              Image.asset('images/Catier.png'),
+              Image.asset('images/Gucci.png'),
+              Image.asset('images/Tiffany & Co.png'),
+            ],
+          ),
+        ),
+        SizedBox(height: 39.h),
+        SizedBox(child: Image.asset('images/3.png')),
+      ],
+    );
+  }
+}

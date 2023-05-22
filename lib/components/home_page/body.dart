@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'home_banner.dart';
-import 'new_arrival.dart';
+import 'new arrival/new_arrival.dart';
 
 class Body extends StatelessWidget {
   const Body({

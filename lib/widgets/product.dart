@@ -17,14 +17,17 @@ class Products extends StatelessWidget {
       height: 260.h,
       child: Column(
         children: [
-          Image.asset(
-            image,
+          Expanded(
+            child: Image.asset(
+              image,
+            ),
           ),
           SizedBox(
             height: 4.h,
           ),
           Wrap(
             children: [
+             
               Text(
                 title,
                 style: TextStyle(fontSize: 12.sp),
@@ -32,6 +35,7 @@ class Products extends StatelessWidget {
               ),
             ],
           ),
+         
           Text(
             price,
             textAlign: TextAlign.center,

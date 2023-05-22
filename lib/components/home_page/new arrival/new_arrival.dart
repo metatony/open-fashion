@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../models/list.dart';
-import '../../widgets/product.dart';
+import '../../../models/list.dart';
+import '../../../widgets/product.dart';
+import 'brands.dart';
 import 'tab_bar.dart';
 
 class NewArrival extends StatelessWidget {
@@ -40,9 +41,23 @@ class NewArrival extends StatelessWidget {
               );
             })
           ],
-        )
+        ),
+        SizedBox(
+          height: 27.h,
+        ),
+        InkWell(
+          onTap: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Explore More', style: TextStyle(fontSize: 16.sp)),
+              ImageIcon(AssetImage('images/Forward Arrow.png')),
+            ],
+          ),
+        ),
+        SizedBox(height: 33.h),
+        Brands(),
       ],
     );
   }
 }
-
