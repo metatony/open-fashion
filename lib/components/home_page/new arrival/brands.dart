@@ -15,6 +15,7 @@ class Brands extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
             alignment: WrapAlignment.center,
             runSpacing: 28.h,
             spacing: 38.w,
