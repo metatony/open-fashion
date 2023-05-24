@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:open_fashion/models/list.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({
@@ -14,14 +15,39 @@ class HomeDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-              decoration: BoxDecoration(color: Color(0xffE7EAEF)),
-              child: Text('Menu')),
-          ListTile(
-            title: Text('New'),
+            decoration: BoxDecoration(
+              color: Color(0xffE7EAEF),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: ImageIcon(AssetImage('icons/Close.png')),
+                ),
+              ],
+            ),
+          ),
+          ...List.generate(
+            menuList.length,
+            (index) {
+              return ListTile(
+                title: Text(menuList[index]),
+                // add drop button here
+                trailing: ImageIcon(AssetImage('icons/Forward.png')),
+              );
+            },
           ),
           ListTile(
-            title: Text('Apparel'),
+            leading: ImageIcon(AssetImage('icons/Call.png')),
+            title: Text('(786) 713-8616'),
           ),
+          ListTile(
+            leading: ImageIcon(AssetImage('icons/Location.png')),
+            title: Text('Store locator'),
+          )
         ],
       ),
     );

@@ -2,14 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:open_fashion/models/list.dart';
-import 'package:open_fashion/widgets/divider.dart';
-import 'package:open_fashion/widgets/header.dart';
+
 
 import 'collections/collections.dart';
 import 'home_banner.dart';
 import 'justforyou/just_for_you.dart';
-import 'justforyou/product.dart';
 import 'new arrival/new_arrival.dart';
 
 class Body extends StatelessWidget {

@@ -41,11 +41,20 @@ List justForYou = [
 
    { 'title' : 'Harris Tweed Three-button Jacket',
   'price' : '\$120',
-  'image' : 'images\Rectangle 321 (1).png',
+  'image' : 'images/Rectangle 321 (1).png',
   },
 
    { 'title' : '1WN reversible angora cardigan',
   'price' : '\$120',
   'image' : 'images/Rectangle 321.png',
   }
+];
+
+List menuList = [
+  'New',
+  'Apparel',
+  'Bag',
+  'Shoes',
+  'Beauty',
+  'Accessories'
 ];
