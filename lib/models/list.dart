@@ -6,6 +6,12 @@ List tab = [
   'Bag',
 ];
 
+List menuTab = [
+  'WOMEN',
+  'MAN',
+  'KIDS',
+];
+
 List allList = [
  { 'title' : '21WN reversible angora cardigan',
   'price' : '\$120',

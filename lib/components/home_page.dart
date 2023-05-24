@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'home_page/body.dart';
-import 'home_page/drawer.dart';
+import 'home_page/drawer/drawer.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
