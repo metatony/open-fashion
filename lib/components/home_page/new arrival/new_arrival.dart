@@ -49,7 +49,6 @@ class NewArrival extends StatelessWidget {
           onTap: () {},
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            
             children: [
               Text('Explore More', style: TextStyle(fontSize: 16.sp)),
               ImageIcon(AssetImage('images/Forward Arrow.png')),

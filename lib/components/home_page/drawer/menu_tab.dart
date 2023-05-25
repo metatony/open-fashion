@@ -27,11 +27,12 @@ class MenuTab extends StatelessWidget {
         ),
       ],
       
-      indicator: DotIndicator(
-        color: Colors.orange,
-        radius: 3.r,
-        distanceFromCenter: 16.h,
-        paintingStyle: PaintingStyle.fill,
+      indicator: UnderlineTabIndicator(
+        borderSide: BorderSide( color: Colors.orange,),
+       
+        //radius: 3.r,
+        //distanceFromCenter: 16.h,
+        //paintingStyle: PaintingStyle.fill,
       ),
     );
   }
