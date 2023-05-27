@@ -64,3 +64,5 @@ List menuList = [
   'Beauty',
   'Accessories'
 ];
+
+int selectedImage = 0;

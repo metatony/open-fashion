@@ -17,3 +17,5 @@ export 'package:open_fashion/components/home_page/new%20arrival/brands.dart';
 export 'package:open_fashion/components/home_page/new%20arrival/tab_bar.dart';
 export 'package:tab_indicator_styler/tab_indicator_styler.dart';
 export 'package:open_fashion/components/home_page/drawer/menu_tab.dart';
+export 'package:carousel_slider/carousel_slider.dart';
+
