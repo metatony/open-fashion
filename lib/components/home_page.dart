@@ -1,15 +1,8 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'home_page/body.dart';
-import 'home_page/drawer/drawer.dart';
+import '../exports.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
-  //var scaffoldKey = GlobalKey<ScaffoldState>();
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

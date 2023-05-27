@@ -1,12 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../models/list.dart';
-import '../../../widgets/divider.dart';
-import '../../../widgets/header.dart';
-import 'product.dart';
+import '../../../exports.dart';
 
 class JustForYou extends StatefulWidget {
   JustForYou({
@@ -53,15 +46,12 @@ class _JustForYouState extends State<JustForYou> {
             ),
           ),
           SizedBox(height: 17.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ...List.generate(
-                justForYou.length,
-                (index) => pageDot(index: index),
-              ),
-            ],
-          ),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            ...List.generate(
+              justForYou.length,
+              (index) => pageDot(index: index),
+            ),
+          ]),
         ],
       ),
     );
@@ -74,7 +64,7 @@ class _JustForYouState extends State<JustForYou> {
       width: 8.w,
       decoration: BoxDecoration(
         color: selectedImage == index ? Colors.orange : Colors.transparent,
-        borderRadius: BorderRadius.circular(3),
+        borderRadius: BorderRadius.circular(3.r),
         border: selectedImage == index
             ? Border.all(color: Colors.transparent)
             : Border.all(color: Colors.black),

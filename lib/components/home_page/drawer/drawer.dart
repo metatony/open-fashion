@@ -1,9 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/material.dart';
-import 'package:open_fashion/models/list.dart';
-
-import 'menu_tab.dart';
+import '../../../exports.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({

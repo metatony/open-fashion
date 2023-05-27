@@ -1,13 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
-import 'collections/collections.dart';
-import 'home_banner.dart';
-import 'justforyou/just_for_you.dart';
-import 'new arrival/new_arrival.dart';
+import '../../exports.dart';
 
 class Body extends StatelessWidget {
   const Body({

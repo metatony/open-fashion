@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../exports.dart';
 
 class Product extends StatelessWidget {
   const Product({

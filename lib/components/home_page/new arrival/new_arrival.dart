@@ -1,12 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../models/list.dart';
-import '../../../widgets/product.dart';
-import 'brands.dart';
-import 'tab_bar.dart';
+import '../../../exports.dart';
 
 class NewArrival extends StatelessWidget {
   const NewArrival({
