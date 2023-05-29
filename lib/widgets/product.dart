@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+// ignore_for_file: prefer_const_constructors
+import 'package:open_fashion/exports.dart';
 
 class Products extends StatelessWidget {
   const Products({
@@ -18,29 +18,19 @@ class Products extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: Image.asset(
-              image,
-            ),
+            child: Image.asset(image),
           ),
-          SizedBox(
-            height: 4.h,
-          ),
+          SizedBox(height: 4.h),
           Wrap(
             children: [
-             
-              Text(
-                title,
-                style: TextStyle(fontSize: 12.sp),
-                textAlign: TextAlign.center,
-              ),
+              Text(title,
+                  style: AppTextTheme.bodySmall, textAlign: TextAlign.center),
             ],
           ),
-         
-          Text(
-            price,
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Color(0xffDD8560), fontSize: 15.sp),
-          ),
+          Text(price,
+              textAlign: TextAlign.center,
+              style:
+                  AppTextTheme.bodyMedium.copyWith(color: Color(0xffDD8560))),
         ],
       ),
     );

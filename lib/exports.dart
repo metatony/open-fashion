@@ -7,7 +7,7 @@ export 'package:open_fashion/components/home_page/new%20arrival/new_arrival.dart
 export 'main.dart';
 export 'components/home_page.dart';
 export 'package:open_fashion/components/home_page/justforyou/product.dart';
-export 'package:open_fashion/models/list.dart';
+export 'package:open_fashion/utilities/list.dart';
 export 'package:open_fashion/widgets/divider.dart';
 export 'package:open_fashion/widgets/header.dart';
 export 'package:open_fashion/components/home_page/drawer/drawer.dart';
@@ -18,4 +18,5 @@ export 'package:open_fashion/components/home_page/new%20arrival/tab_bar.dart';
 export 'package:tab_indicator_styler/tab_indicator_styler.dart';
 export 'package:open_fashion/components/home_page/drawer/menu_tab.dart';
 export 'package:carousel_slider/carousel_slider.dart';
+export 'package:open_fashion/utilities/text_theme.dart';
 

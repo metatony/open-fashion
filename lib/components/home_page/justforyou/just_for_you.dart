@@ -37,7 +37,7 @@ class _JustForYouState extends State<JustForYou> {
             options: CarouselOptions(
               height: 390.h,
               autoPlay: true,
-              enlargeCenterPage: true,
+              enlargeCenterPage: false,
               viewportFraction: 0.6,
               enableInfiniteScroll: false,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -79,20 +79,3 @@ AnimatedContainer pageDot({required int index}) {
     duration: Duration(milliseconds: 200),
   );
 }
-
-
-
-
-
-
-
-
-
-
-// Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-//             ...List.generate(
-//               justForYou.length,
-//               (index) => pageDot(index: index),
-//             ),
-//           ]),
-

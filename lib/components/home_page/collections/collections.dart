@@ -1,4 +1,3 @@
-
 import '../../../exports.dart';
 
 class Collections extends StatelessWidget {
@@ -11,17 +10,11 @@ class Collections extends StatelessWidget {
     return SizedBox(
       child: Column(
         children: [
-          Text(
-            'COLLECTIONS',
-            style: TextStyle(fontSize: 18.sp, letterSpacing: 4.w),
-          ),
+          Text('COLLECTIONS', style: AppTextTheme.title),
           SizedBox(height: 16.h),
           SizedBox(
             width: double.infinity,
-            child: Image.asset(
-              'images/Frame 2.png',
-              fit: BoxFit.fill,
-            ),
+            child: Image.asset('images/Frame 2.png', fit: BoxFit.fill),
           ),
           SizedBox(height: 40.h),
           Padding(

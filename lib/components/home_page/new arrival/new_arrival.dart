@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:open_fashion/utilities/text_theme.dart';
+
 import '../../../exports.dart';
 
 class NewArrival extends StatelessWidget {
@@ -13,8 +15,7 @@ class NewArrival extends StatelessWidget {
       children: [
         Text(
           'NEW ARRIVAL',
-          style: TextStyle(
-              fontSize: 18.sp, fontWeight: FontWeight.w400, letterSpacing: 4),
+          style: AppTextTheme.title,
         ),
         SizedBox(child: Image.asset('images/3.png')),
         SizedBox(height: 15.h),
@@ -44,7 +45,7 @@ class NewArrival extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Explore More', style: TextStyle(fontSize: 16.sp)),
+              Text('Explore More', style: AppTextTheme.titleMedium),
               ImageIcon(AssetImage('images/Forward Arrow.png')),
             ],
           ),

@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:open_fashion/components/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( DevicePreview
+  (builder: (context) => MyApp(),
+  enabled: true,
+  ),
+  );
 }
 
 class MyApp extends StatelessWidget {

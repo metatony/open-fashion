@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-
 import '../../../exports.dart';
 
 class MenuTab extends StatelessWidget {
@@ -24,13 +23,10 @@ class MenuTab extends StatelessWidget {
           },
         ),
       ],
-      
       indicator: UnderlineTabIndicator(
-        borderSide: BorderSide( color: Colors.orange,),
-       
-        //radius: 3.r,
-        //distanceFromCenter: 16.h,
-        //paintingStyle: PaintingStyle.fill,
+        borderSide: BorderSide(
+          color: Colors.orange,
+        ),
       ),
     );
   }

@@ -1,6 +1,5 @@
 
 import '../../../exports.dart';
-import '../../../models/list.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({
