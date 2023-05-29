@@ -19,4 +19,8 @@ export 'package:tab_indicator_styler/tab_indicator_styler.dart';
 export 'package:open_fashion/components/home_page/drawer/menu_tab.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 export 'package:open_fashion/utilities/text_theme.dart';
+export 'package:open_fashion/widgets/appbar.dart';
+export 'package:open_fashion/components/blog_page/blog_tag_widget.dart';
+export 'package:open_fashion/components/blog_page/blog_container.dart';
+
 
