@@ -40,7 +40,7 @@ class Cart extends StatelessWidget {
                   child: Text(
                     'You have no items in your Shopping Bag.',
                     style:
-                        AppTextTheme.bodySmall.copyWith(color: Color(0xff888888)),
+                        TextStyle(fontWeight: FontWeight.w400, color: Color(0xff888888), fontSize: 12.sp),
                   ),
                 ),
               ],
@@ -66,11 +66,7 @@ class Cart extends StatelessWidget {
               SizedBox(width: 24.w),
               Text(
                 'Continue shopping'.toUpperCase(),
-                style: AppTextTheme.bodyLarge.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w100,
-                    fontSize: 12.sp,
-                    letterSpacing: 3),
+                style: TextStyle(fontWeight: FontWeight.w400, color: Colors.white, fontSize: 16.sp)
               ),
             ],
           ),

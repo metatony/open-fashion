@@ -18,7 +18,7 @@ class BlogPage extends StatelessWidget {
           SizedBox(height: 29.h),
           HeaderTitle(header: 'BLOG'),
           Div(),
-          SizedBox(height: 20),
+          SizedBox(height: 20.h),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -32,7 +32,7 @@ class BlogPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Expanded(
             child: SingleChildScrollView(
               child: Padding(

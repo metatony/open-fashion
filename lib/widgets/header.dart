@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:open_fashion/utilities/text_theme.dart';
+
+import '../exports.dart';
 
 class HeaderTitle extends StatelessWidget {
   const HeaderTitle({super.key, required this.header});
@@ -10,7 +10,7 @@ class HeaderTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       header,
-      style: AppTextTheme.title,
+      style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.sp, letterSpacing: 4),
     );
   }
 }

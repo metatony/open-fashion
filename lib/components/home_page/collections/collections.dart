@@ -10,7 +10,7 @@ class Collections extends StatelessWidget {
     return SizedBox(
       child: Column(
         children: [
-          Text('COLLECTIONS', style: AppTextTheme.title),
+          Text('COLLECTIONS', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.sp, letterSpacing: 4)),
           SizedBox(height: 16.h),
           SizedBox(
             width: double.infinity,

@@ -23,14 +23,14 @@ class Products extends StatelessWidget {
           SizedBox(height: 4.h),
           Wrap(
             children: [
-              Text(title,
-                  style: AppTextTheme.bodySmall, textAlign: TextAlign.center),
+              Text(title, textAlign:  TextAlign.center,
+                  style: TextStyle(fontWeight: FontWeight.w400, height: 1.2.h, fontSize: 12.sp)),
             ],
           ),
           Text(price,
               textAlign: TextAlign.center,
               style:
-                  AppTextTheme.bodyMedium.copyWith(color: Color(0xffDD8560))),
+                  TextStyle(fontWeight: FontWeight.w400,color: Colors.orange, fontSize: 14.sp)),
         ],
       ),
     );

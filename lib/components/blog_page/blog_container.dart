@@ -31,15 +31,12 @@ class BlogContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(title.toUpperCase(),
-                      style: AppTextTheme.bodySmall.copyWith(
-                          fontWeight: FontWeight.bold, height: 1.5.h)),
+                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, height: 1.5.h, fontSize: 12.sp)),
                   //SizedBox(height: 8,),
                   Text(body,
-                      style: AppTextTheme.bodySmall
-                          .copyWith(height: 1.5.h, color: Color(0xff888888))),
+                      style: TextStyle(fontWeight: FontWeight.w400, height: 1.5.h, color: Color(0xff888888), fontSize: 12.sp)),
                   Text(date,
-                      style: AppTextTheme.bodySmall
-                          .copyWith(color: Color(0xff888888), fontSize: 11.sp)),
+                      style: TextStyle(fontWeight: FontWeight.w400, height: 1.5.h, color: Color(0xff888888), fontSize: 12.sp)),
                 ],
               ),
             )

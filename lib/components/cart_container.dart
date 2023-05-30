@@ -1,9 +1,9 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors
 
 import '../exports.dart';
 
 class CartContainer extends StatelessWidget {
-  CartContainer({
+  const CartContainer({
     super.key,
     required this.image,
     required this.title,
@@ -29,20 +29,11 @@ class CartContainer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(title.toUpperCase(),
-                    style: AppTextTheme.bodySmall.copyWith(
-                      fontWeight: FontWeight.bold,
-                    )),
+                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 12.sp)),
                 Text(body,
-                    style: AppTextTheme.bodySmall
-                        .copyWith(color: Color(0xff888888), fontSize: 12.sp)),
-                Container(
-                  child: Row(
-                    children: [],
-                  ),
-                ),
+                    style: TextStyle(fontWeight: FontWeight.w400, color: Color(0xff888888), fontSize: 12.sp)),
                 Text(price,
-                    style: AppTextTheme.bodySmall
-                        .copyWith(color: Colors.orange, fontSize: 15.sp)),
+                    style: TextStyle(fontWeight: FontWeight.w400, color: Colors.orange, fontSize: 15.sp)),
               ],
             ),
           )

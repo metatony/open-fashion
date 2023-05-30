@@ -11,7 +11,7 @@ class HomeTab extends StatelessWidget {
     return TabBar(
       labelPadding: EdgeInsets.symmetric(horizontal: 1.w),
       labelColor: Colors.black,
-      unselectedLabelColor: Color(0xff888888),
+      unselectedLabelColor: const Color(0xff888888),
       tabs: [
         ...List.generate(
           tab.length,

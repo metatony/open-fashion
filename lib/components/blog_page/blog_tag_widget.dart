@@ -16,7 +16,7 @@ class BlogTagWidget extends StatelessWidget {
       margin: EdgeInsets.only(left: 16.w),
       height: 32.h,
       //width: 73.w,
-      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 8.h),
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.r),
         color: Color.fromARGB(255, 243, 243, 243),
