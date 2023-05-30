@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:provider/provider.dart';
+
 import '../../../exports.dart';
-  
+
 class JustForYou extends StatefulWidget {
   const JustForYou({
     super.key,
@@ -11,71 +13,73 @@ class JustForYou extends StatefulWidget {
 }
 
 class _JustForYouState extends State<JustForYou> {
-
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: Column(
-        children: [
-          HeaderTitle(header: 'JUST FOR YOU'),
-          Div(),
-          SizedBox(height: 23.h),
-          CarouselSlider(
-            items: [
-              ...List.generate(
-                justForYou.length,
-                (index) {
-                  return Product(
-                    image: justForYou[index]['image'],
-                    title: justForYou[index]['title'],
-                    price: justForYou[index]['price'],
-                  );
+      child: Consumer<NotifierState>(
+        builder: (BuildContext context, value, Widget? child) => Column(
+          children: [
+            HeaderTitle(header: 'JUST FOR YOU'),
+            Div(),
+            SizedBox(height: 23.h),
+            CarouselSlider(
+              items: [
+                ...List.generate(
+                  value.justForYou.length,
+                  (index) {
+                    return Product(
+                      image: value.justForYou[index]['image'],
+                      title: value.justForYou[index]['title'],
+                      price: value.justForYou[index]['price'],
+                    );
+                  },
+                ).toList(),
+              ],
+              options: CarouselOptions(
+                height: 390.h,
+                autoPlay: true,
+                enlargeCenterPage: false,
+                viewportFraction: 0.6,
+                enableInfiniteScroll: false,
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    value.selectedImage = index;
+                  });
                 },
-              ).toList(),
-            ],
-            options: CarouselOptions(
-              height: 390.h,
-              autoPlay: true,
-              enlargeCenterPage: false,
-              viewportFraction: 0.6,
-              enableInfiniteScroll: false,
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
-              onPageChanged: (index, reason) {
-                setState(() {
-                  selectedImage = index;
-                });
-              },
+              ),
             ),
-          ),
-          SizedBox(height: 17.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ...List.generate(justForYou.length, (index) {
-                return pageDot(index: index);
-              })
-            ],
-          ),
-          SizedBox(height: 17.h),
-        ],
+            SizedBox(height: 17.h),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ...List.generate(value.justForYou.length, (index) {
+                  return pageDot(index: index);
+                })
+              ],
+            ),
+            SizedBox(height: 17.h),
+          ],
+        ),
       ),
     );
   }
 }
 
-AnimatedContainer pageDot({required int index}) {
-  return AnimatedContainer(
-    margin: EdgeInsets.only(right: 6.w),
-    height: 8.h,
-    width: 8.w,
-    decoration: BoxDecoration(
-      color: selectedImage == index ? Colors.orange : Colors.transparent,
-      borderRadius: BorderRadius.circular(6.r),
-      border: selectedImage == index
-          ? Border.all(color: Colors.transparent)
-          : Border.all(color: Colors.grey),
+Consumer<Object?> pageDot({required int index}) {
+  return Consumer <NotifierState>(
+    builder: (BuildContext context, value, Widget? child) => AnimatedContainer(
+      margin: EdgeInsets.only(right: 6.w),
+      height: 8.h,
+      width: 8.w,
+      decoration: BoxDecoration(
+        color: value.selectedImage == index ? Colors.orange : Colors.transparent,
+        borderRadius: BorderRadius.circular(6.r),
+        border: value.selectedImage == index
+            ? Border.all(color: Colors.transparent)
+            : Border.all(color: Colors.grey),
+      ),
+      duration: Duration(milliseconds: 200),
     ),
-    duration: Duration(milliseconds: 200),
   );
 }

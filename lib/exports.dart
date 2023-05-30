@@ -22,5 +22,5 @@ export 'package:open_fashion/utilities/text_theme.dart';
 export 'package:open_fashion/widgets/appbar.dart';
 export 'package:open_fashion/components/blog_page/blog_tag_widget.dart';
 export 'package:open_fashion/components/blog_page/blog_container.dart';
-
+export 'package:provider/provider.dart';
 
