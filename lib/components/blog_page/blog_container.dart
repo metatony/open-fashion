@@ -36,7 +36,7 @@ class BlogContainer extends StatelessWidget {
                   //SizedBox(height: 8,),
                   Text(body,
                       style: AppTextTheme.bodySmall
-                          .copyWith(height: 1.2.h, color: Color(0xff888888))),
+                          .copyWith(height: 1.5.h, color: Color(0xff888888))),
                   Text(date,
                       style: AppTextTheme.bodySmall
                           .copyWith(color: Color(0xff888888), fontSize: 11.sp)),

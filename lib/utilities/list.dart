@@ -17,21 +17,25 @@ List allList = [
     'title': '21WN reversible angora cardigan',
     'price': '\$120',
     'image': 'images/Rectangle 325.png',
+    'header' : 'LAMEREI',
   },
   {
     'title': '21WN reversible angora cardigan',
     'price': '\$120',
     'image': 'images/Rectangle 325 (2).png',
+    'header' : 'LAMEREI',
   },
   {
     'title': '21WN reversible angora cardigan',
     'price': '\$120',
     'image': 'images/Rectangle 325 (3).png',
+    'header' : 'LAMEREI',
   },
   {
     'title': 'Oblong bag',
     'price': '\$120',
     'image': 'images/Rectangle 325 (4).png',
+    'header' : 'LAMEREI',
   }
 ];
 

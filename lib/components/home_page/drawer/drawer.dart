@@ -1,4 +1,6 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:open_fashion/components/blog_page/blog_page.dart';
+
 import '../../../exports.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -48,6 +50,14 @@ class HomeDrawer extends StatelessWidget {
             ListTile(
               leading: ImageIcon(AssetImage('icons/Location.png')),
               title: Text('Store locator'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BlogPage()));
+              },
+              child: Text('Blog',
+              textAlign: TextAlign.start,),
             )
           ],
         ),

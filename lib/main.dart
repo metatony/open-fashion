@@ -5,12 +5,16 @@ import 'package:open_fashion/components/blog_page/blog_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:open_fashion/components/cart_page.dart';
+import 'package:open_fashion/components/home_page.dart';
 
 void main() {
-  runApp( DevicePreview
+  runApp(
+    DevicePreview
   (builder: (context) => MyApp(),
   enabled: true,
   ),
+  //MyApp()
   );
 }
 
@@ -27,7 +31,7 @@ class MyApp extends StatelessWidget {
                 appBarTheme: AppBarTheme(color: Color(0xffE7EAEF)),
                 fontFamily: GoogleFonts.tenorSans().fontFamily),
             debugShowCheckedModeBanner: false,
-            home: BlogPage(),
+            home: HomePage(),
           );
         });
   }
