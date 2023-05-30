@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-
 import 'package:provider/provider.dart';
 
 import '../../../exports.dart';
@@ -15,10 +14,11 @@ class NewArrival extends StatelessWidget {
     return Consumer<NotifierState>(
       builder: (BuildContext context, value, child) => Column(
         children: [
-          Text(
-            'NEW ARRIVAL',
-            style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18.sp, letterSpacing: 4)
-          ),
+          Text('NEW ARRIVAL',
+              style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18.sp,
+                  letterSpacing: 4)),
           SizedBox(child: Image.asset('images/3.png')),
           SizedBox(height: 15.h),
           HomeTab(),
@@ -35,6 +35,10 @@ class NewArrival extends StatelessWidget {
                   title: value.allList[index]['title'],
                   price: value.allList[index]['price'],
                   image: value.allList[index]['image'],
+                  onPressed: () {
+                    Provider.of<NotifierState>(context, listen: false)
+                        .addToCart(index);
+                  },
                 );
               })
             ],
@@ -47,7 +51,11 @@ class NewArrival extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Explore More', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16.sp, letterSpacing: 2)),
+                Text('Explore More',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
+                        letterSpacing: 2)),
                 ImageIcon(AssetImage('images/Forward Arrow.png')),
               ],
             ),

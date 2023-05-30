@@ -119,6 +119,33 @@ class NotifierState extends ChangeNotifier {
     },
   ];
 
+  //list of cart items
+  List _cartItems = [];
+
+  //add items to cart
+  void addToCart(int index) {
+    _cartItems.add(_allList[index]);
+    notifyListeners();
+  }
+
+  //remove items from cart
+  void removeItem(int index) {
+    _cartItems.removeAt(index);
+    notifyListeners();
+  }
+
+  //calculate total price
+  String calculateTotalPrice() {
+    double totalPrice = 0;
+    for (int i = 0; i < _cartItems.length; i++) {
+      totalPrice += double.parse(_cartItems[i]['price']);
+    }
+    return totalPrice.toStringAsFixed(2);
+  }
+
+  //to control text widget display when cart is empty
+  int cartEmpty = 0;
+
   // getter methods
 
   get blogList => _blogList;
@@ -128,4 +155,5 @@ class NotifierState extends ChangeNotifier {
   get menuList => _menuList;
   get justForYou => _justForYou;
   get allList => _allList;
+  get cartItems => _cartItems;
 }

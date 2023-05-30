@@ -12,37 +12,45 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      centerTitle: true,
-      elevation: 0,
-      leading: Builder(
-        builder: (context) => IconButton(
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
-          icon: ImageIcon(AssetImage('images/Menu.png'), color: Colors.black),
-        ),
-      ),
-      title: Image.asset('images/Logo.png'),
-      actions: [
-        Image.asset('images/Search.png'),
-        IconButton(
+    return Consumer<NotifierState>(
+      builder: ( context, value, child)
+      => AppBar(
+        
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        elevation: 0,
+        leading: Builder(
+          builder: (context) => IconButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                PageTransition(
-                  duration: Duration(milliseconds: 250),
-                  type: PageTransitionType.leftToRight,
-                  child: Cart(),
-                ),
-              );
+              Scaffold.of(context).openDrawer();
             },
-            icon: ImageIcon(
-              AssetImage('images/shopping bag.png'),
-              color: Colors.black,
-            ))
-      ],
+            icon: ImageIcon(AssetImage('images/Menu.png'), color: Colors.black),
+          ),
+        ),
+        title: Image.asset('images/Logo.png'),
+        actions: [
+          Image.asset('images/Search.png'),
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    duration: Duration(milliseconds: 250),
+                    type: PageTransitionType.leftToRight,
+                    child: Cart(),
+                  ),
+                );
+              },
+              icon: ImageIcon(
+                
+                AssetImage('images/shopping bag.png'),
+                color: Colors.black,
+              )),
+    
+              Text(value.cartItems.length.toString(), style: TextStyle(color: Colors.black),),
+    
+        ],
+      ),
     );
   }
 

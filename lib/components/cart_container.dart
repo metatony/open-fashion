@@ -15,29 +15,40 @@ class CartContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 134.h,
-      margin: EdgeInsets.only(bottom: 16.h),
-      width: double.infinity,
-      child: Row(
-        children: [
-          Image.asset(image, width: 100.w, height: 134.h),
-          SizedBox(width: 11.75.w),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(title.toUpperCase(),
-                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 12.sp)),
-                Text(body,
-                    style: TextStyle(fontWeight: FontWeight.w400, color: Color(0xff888888), fontSize: 12.sp)),
-                Text(price,
-                    style: TextStyle(fontWeight: FontWeight.w400, color: Colors.orange, fontSize: 15.sp)),
-              ],
-            ),
-          )
-        ],
+    return Consumer<NotifierState>(
+      builder: (BuildContext context, value, child) => Container(
+        height: 134.h,
+        margin: EdgeInsets.only(bottom: 16.h),
+        width: double.infinity,
+        child: Row(
+          children: [
+            Image.asset(image, width: 100.w, height: 134.h),
+            SizedBox(width: 11.75.w),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title.toUpperCase(),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 12.sp)),
+                  Text(body,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xff888888),
+                          fontSize: 12.sp)),
+                  Text(price,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.orange,
+                          fontSize: 15.sp)),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

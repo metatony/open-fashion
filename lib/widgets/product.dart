@@ -6,9 +6,10 @@ class Products extends StatelessWidget {
     super.key,
     required this.title,
     required this.price,
-    required this.image,
+    required this.image, required this.onPressed,
   });
   final String title, price, image;
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +24,23 @@ class Products extends StatelessWidget {
           SizedBox(height: 4.h),
           Wrap(
             children: [
-              Text(title, textAlign:  TextAlign.center,
-                  style: TextStyle(fontWeight: FontWeight.w400, height: 1.2.h, fontSize: 12.sp)),
+              Text(title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      height: 1.2.h,
+                      fontSize: 12.sp)),
             ],
           ),
-          Text(price,
-              textAlign: TextAlign.center,
-              style:
-                  TextStyle(fontWeight: FontWeight.w400,color: Colors.orange, fontSize: 14.sp)),
+          GestureDetector(
+            onTap: onPressed,
+            child: Text(price,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    color: Colors.orange,
+                    fontSize: 14.sp)),
+          ),
         ],
       ),
     );
