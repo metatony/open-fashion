@@ -31,12 +31,12 @@ class Cart extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ...List.generate(value.cartItems.length, (index) {
+                  ...List.generate(value.allList.length, (index) {
                     return CartContainer(
-                      image: value.cartItems[index]['image'],
-                      body: value.cartItems[index]['title'],
-                      price: value.cartItems[index]['price'],
-                      title: value.cartItems[index]['header'],
+                      image: value.allList[index]['image'],
+                      body: value.allList[index]['title'],
+                      price: value.allList[index]['price'],
+                      title: value.allList[index]['header'],
                     );
                   }),
                   Center(

@@ -39,6 +39,9 @@ class CartContainer extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           color: Color(0xff888888),
                           fontSize: 12.sp)),
+                  ProductCounter(
+                    number: '0',
+                  ),
                   Text(price,
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
@@ -50,6 +53,81 @@ class CartContainer extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ProductCounter extends StatefulWidget {
+  ProductCounter({
+    super.key,
+    required this.number,
+  });
+
+  String number;
+
+  @override
+  State<ProductCounter> createState() => _ProductCounterState();
+}
+
+class _ProductCounterState extends State<ProductCounter> {
+  int countNum = 0;
+  void addCounter() {
+    countNum++;
+    widget.number = countNum.toString();
+  }
+
+  void minusCounter() {
+    countNum--;
+    widget.number = countNum.toString();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Card(
+          shape: CircleBorder(),
+          child: Container(
+            padding: EdgeInsets.all(4),
+            height: 24,
+            width: 24,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: IconButton(
+              onPressed: () {
+                setState(() {
+                  minusCounter();
+                });
+              },
+              icon: ImageIcon(
+                AssetImage('icons/Plus (1).png'),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(width: 13),
+        Text(widget.number),
+        SizedBox(width: 13),
+        Card(
+          shape: CircleBorder(),
+          child: Container(
+            padding: EdgeInsets.all(4),
+            height: 24,
+            width: 24,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: IconButton(
+                icon: ImageIcon(AssetImage('icons/Plus.png')),
+                onPressed: () {
+                  setState(() {
+                    addCounter();
+                  });
+                }),
+          ),
+        ),
+      ],
     );
   }
 }
