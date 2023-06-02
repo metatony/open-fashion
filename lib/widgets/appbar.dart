@@ -13,9 +13,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<NotifierState>(
-      builder: ( context, value, child)
-      => AppBar(
-        
+      builder: (context, value, child) => AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
         elevation: 0,
@@ -30,25 +28,50 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         title: Image.asset('images/Logo.png'),
         actions: [
           Image.asset('images/Search.png'),
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  PageTransition(
-                    duration: Duration(milliseconds: 250),
-                    type: PageTransitionType.leftToRight,
-                    child: Cart(),
-                  ),
-                );
-              },
-              icon: ImageIcon(
-                
-                AssetImage('images/shopping bag.png'),
-                color: Colors.black,
-              )),
-    
-              Text(value.cartItems.length.toString(), style: TextStyle(color: Colors.black),),
-    
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        duration: Duration(milliseconds: 250),
+                        type: PageTransitionType.leftToRight,
+                        child: Cart(),
+                      ),
+                    );
+                  },
+                  icon: ImageIcon(
+                    AssetImage('images/shopping bag.png'),
+                    color: Color.fromARGB(255, 26, 25, 25),
+                  )),
+          
+              if (value.cartItems.length != 0)
+                Positioned(
+                    top: 3,
+                    right: 20,
+                    child: Container(
+                      padding: EdgeInsets.all(2),
+                      height: 20,
+                      width: 20,
+                      decoration: BoxDecoration(
+                        color: Colors.orange,
+                        shape: BoxShape.circle,
+                        border: Border.all(width: 1.3, color: Colors.white),
+                      ),
+                      child: Center(
+                        child: Text(
+                          value.cartItems.length.toString(),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ))
+            ],
+          )
         ],
       ),
     );

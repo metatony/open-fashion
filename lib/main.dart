@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
                   appBarTheme: AppBarTheme(color: Color(0xffE7EAEF)),
                   fontFamily: GoogleFonts.tenorSans().fontFamily),
               debugShowCheckedModeBanner: false,
-              home: Cart(),
+              home: HomePage(),
             );
           }),
     );

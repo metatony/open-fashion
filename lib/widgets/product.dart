@@ -34,7 +34,7 @@ class Products extends StatelessWidget {
           ),
           GestureDetector(
             onTap: onPressed,
-            child: Text(price,
+            child: Text('\$' + price,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.w400,

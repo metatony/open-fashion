@@ -3,6 +3,8 @@
 import 'package:provider/provider.dart';
 
 import '../../../exports.dart';
+import '../../../utilities/item.list.dart';
+
 
 class NewArrival extends StatelessWidget {
   const NewArrival({
@@ -30,11 +32,11 @@ class NewArrival extends StatelessWidget {
             runSpacing: 12.h,
             spacing: 13.w,
             children: [
-              ...List.generate(value.allList.length, (index) {
+              ...List.generate(allList.length, (index) {
                 return Products(
-                  title: value.allList[index]['title'],
-                  price: value.allList[index]['price'],
-                  image: value.allList[index]['image'],
+                  title: allList[index]['title'],
+                  price: allList[index]['price'],
+                  image: allList[index]['image'],
                   onPressed: () {
                     Provider.of<NotifierState>(context, listen: false)
                         .addToCart(index);

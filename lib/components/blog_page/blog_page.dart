@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:open_fashion/exports.dart';
+import 'package:open_fashion/utilities/item.list.dart';
 import 'package:provider/provider.dart';
 
 class BlogPage extends StatelessWidget {
@@ -41,13 +42,13 @@ class BlogPage extends StatelessWidget {
                   child: Column(
                     children: [
                       ...List.generate(
-                        value.blogList.length,
+                        blogList.length,
                         (index) {
                           return BlogContainer(
-                            body: value.blogList[index]['body'],
-                            date: value.blogList[index]['date'],
-                            image: value.blogList[index]['image'],
-                            title: value.blogList[index]['title'],
+                            body: blogList[index]['body'],
+                            date: blogList[index]['date'],
+                            image: blogList[index]['image'],
+                            title: blogList[index]['title'],
                           );
                         },
                       ),
