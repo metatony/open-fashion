@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/exports.dart';
-import 'package:open_fashion/utilities/item.list.dart';
-import 'package:provider/provider.dart';
+import 'package:open_fashion/utilities/exports.dart';
+import 'package:open_fashion/models/List.dart';
 
 class BlogPage extends StatelessWidget {
   const BlogPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +49,7 @@ class BlogPage extends StatelessWidget {
                             date: blogList[index]['date'],
                             image: blogList[index]['image'],
                             title: blogList[index]['title'],
+                            index: index,
                           );
                         },
                       ),

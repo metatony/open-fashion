@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:open_fashion/exports.dart';
+import 'package:open_fashion/utilities/exports.dart';
 
 class Products extends StatelessWidget {
   const Products({

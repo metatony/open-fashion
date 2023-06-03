@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:open_fashion/components/cart_container.dart';
-import 'package:open_fashion/exports.dart';
-import 'package:open_fashion/utilities/item.list.dart';
+import 'package:open_fashion/components/cart/cart_container.dart';
+import 'package:open_fashion/utilities/exports.dart';
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -39,50 +38,47 @@ class Cart extends StatelessWidget {
                       title: value.cartItems[index]['header'],
                     );
                   }),
-
-
-                  value.cartItems.length != value.cartEmpty ?
-                SizedBox(
-                  
-                  child:Column(
-                    children: [
-                      SizedBox(height: 10.h),
-                      Divider(),
-                      SizedBox(height: 14.h),
-                        Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'SUB TOTAL',
-                        style: TextStyle(
-                          letterSpacing: 2,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14.sp,
-                        ),
-                      ),
-                      Text(
-                        '\$' + value.calculateTotalPrice(),
-                        style: TextStyle(
-                          letterSpacing: 2,
-                          fontSize: 16.sp,
-                          color: Colors.orange,
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 6.h),
-                  Text(
-                    '*shipping charges, taxes and discount codes are calculated at the time of accounting. ',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        color: Color(0xff888888),
-                        height: 1.8.h),
-                  ),
-                    ],
-                  ) ,
-                ) : SizedBox(),
-
-
+                  value.cartItems.length != value.cartEmpty
+                      ? SizedBox(
+                          child: Column(
+                            children: [
+                              SizedBox(height: 10.h),
+                              Divider(),
+                              SizedBox(height: 14.h),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'SUB TOTAL',
+                                    style: TextStyle(
+                                      letterSpacing: 2,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14.sp,
+                                    ),
+                                  ),
+                                  Text(
+                                    '\$' + value.calculateTotalPrice(),
+                                    style: TextStyle(
+                                      letterSpacing: 2,
+                                      fontSize: 16.sp,
+                                      color: Colors.orange,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(height: 6.h),
+                              Text(
+                                '*shipping charges, taxes and discount codes are calculated at the time of accounting. ',
+                                style: TextStyle(
+                                    fontSize: 14.sp,
+                                    color: Color(0xff888888),
+                                    height: 1.8.h),
+                              ),
+                            ],
+                          ),
+                        )
+                      : SizedBox(),
                   Center(
                     child: Text(
                       value.cartItems.length != value.cartEmpty
@@ -115,7 +111,10 @@ class Cart extends StatelessWidget {
                   color: Colors.white,
                 ),
                 SizedBox(width: 24.w),
-                Text('Continue shopping'.toUpperCase(),
+                Text(
+                    value.cartItems.length != value.cartEmpty
+                        ? 'BUY NOW'
+                        : 'CONTINUE SHOPPING',
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Colors.white,

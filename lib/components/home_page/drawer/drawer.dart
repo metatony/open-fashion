@@ -2,7 +2,7 @@
 import 'package:open_fashion/components/blog_page/blog_page.dart';
 import 'package:provider/provider.dart';
 
-import '../../../exports.dart';
+import '../../../utilities/exports.dart';
 
 class HomeDrawer extends StatelessWidget {
   const HomeDrawer({

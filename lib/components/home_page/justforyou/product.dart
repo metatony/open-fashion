@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import '../../../exports.dart';
+import '../../../utilities/exports.dart';
 
 class Product extends StatelessWidget {
   const Product({

@@ -2,8 +2,8 @@
 
 import 'package:provider/provider.dart';
 
-import '../../../exports.dart';
-import '../../../utilities/item.list.dart';
+import '../../../utilities/exports.dart';
+import '../../../models/List.dart';
 
 
 class NewArrival extends StatelessWidget {

@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/components/home_page/new%20arrival/cart_counter.dart';
+import 'package:open_fashion/components/cart/cart_counter.dart';
 
-import '../exports.dart';
+import '../../utilities/exports.dart';
 
 class CartContainer extends StatelessWidget {
   CartContainer({
@@ -41,10 +41,7 @@ class CartContainer extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           color: Color(0xff888888),
                           fontSize: 12.sp)),
-                  ProductCounter(
-                      //number: '0'
-
-                      ),
+                  ProductCounter(),
                   Text('\$' + price,
                       style: TextStyle(
                           fontWeight: FontWeight.w400,

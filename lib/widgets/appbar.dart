@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/components/cart_page.dart';
+import 'package:open_fashion/components/cart/cart_page.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../exports.dart';
+import '../utilities/exports.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({super.key, required this.appBar});

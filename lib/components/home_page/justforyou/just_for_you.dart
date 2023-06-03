@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:provider/provider.dart';
 
-import '../../../exports.dart';
+import '../../../utilities/exports.dart';
 
 class JustForYou extends StatefulWidget {
   const JustForYou({

@@ -1,5 +1,5 @@
 
-import '../../../exports.dart';
+import '../../../utilities/exports.dart';
 
 class Brands extends StatelessWidget {
   const Brands({

@@ -43,6 +43,7 @@ dependencies:
   page_transition: ^2.0.9
   provider: ^6.0.5
   footer: ^0.0.4
+  animations: ^2.0.7
 
 dev_dependencies:
   flutter_test:

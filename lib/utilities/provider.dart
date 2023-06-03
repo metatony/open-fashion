@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_final_fields
 
-import 'package:open_fashion/exports.dart';
+import 'package:open_fashion/utilities/exports.dart';
 
-import 'item.list.dart';
+import '../models/List.dart';
 
 class NotifierState extends ChangeNotifier {
   //home page tabb bar  list
@@ -11,8 +11,6 @@ class NotifierState extends ChangeNotifier {
   //drop downmenu tab bar lsit
 
   List menuTab = ['WOMEN', 'MAN', 'KIDS'];
-
-  //homepage product List
 
   //just for you product list carousel
 
@@ -38,6 +36,8 @@ class NotifierState extends ChangeNotifier {
       'image': 'images/Rectangle 321.png',
     }
   ];
+
+  
 
   //dropdown menu list
 

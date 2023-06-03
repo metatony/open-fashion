@@ -1,4 +1,4 @@
-import '../../../exports.dart';
+import '../../../utilities/exports.dart';
 
 class Collections extends StatelessWidget {
   const Collections({
