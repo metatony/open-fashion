@@ -1,46 +1,30 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/components/blog_page/blog_post.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:open_fashion/screens/cart/cart_counter.dart';
 
 import '../../utilities/exports.dart';
 
-class BlogContainer extends StatelessWidget {
-  BlogContainer({
+class CartContainer extends StatelessWidget {
+  CartContainer({
     super.key,
     required this.image,
     required this.title,
     required this.body,
-    required this.date,
-    required this.index,
+    required this.price,
   });
 
-  final int index;
-
-  final String image, title, body, date;
+  final String image, title, body, price;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          PageTransition(
-            duration: Duration(milliseconds: 300),
-            type: PageTransitionType.leftToRight,
-            child: BlogPost(
-              currentIndex: index,
-            ),
-          ),
-        );
-      },
-      child: Container(
-        height: 155.h,
-        margin: EdgeInsets.only(bottom: 23.h),
+    return Consumer<NotifierState>(
+      builder: (BuildContext context, value, child) => Container(
+        height: 134.h,
+        margin: EdgeInsets.only(bottom: 16.h),
         width: double.infinity,
         child: Row(
           children: [
-            Image.asset(image, width: 120.w, height: 155.h),
+            Image.asset(image, width: 100.w, height: 134.h),
             SizedBox(width: 11.75.w),
             Expanded(
               child: Column(
@@ -51,21 +35,18 @@ class BlogContainer extends StatelessWidget {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
-                          height: 1.5.h,
                           fontSize: 12.sp)),
-                  //SizedBox(height: 8,),
                   Text(body,
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
-                          height: 1.5.h,
                           color: Color(0xff888888),
                           fontSize: 12.sp)),
-                  Text(date,
+                  ProductCounter(),
+                  Text('\$' + price,
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
-                          height: 1.5.h,
-                          color: Color(0xff888888),
-                          fontSize: 12.sp)),
+                          color: Colors.orange,
+                          fontSize: 15.sp)),
                 ],
               ),
             )

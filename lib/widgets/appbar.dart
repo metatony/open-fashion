@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/components/cart/cart_page.dart';
+import 'package:open_fashion/screens/cart/cart_page.dart';
 import 'package:page_transition/page_transition.dart';
 
 import '../utilities/exports.dart';

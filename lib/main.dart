@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:device_preview/device_preview.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:open_fashion/components/blog_page/blog_page.dart';
-import 'package:open_fashion/components/blog_page/blog_post.dart';
 
 import 'utilities/exports.dart';
 
@@ -12,7 +10,6 @@ void main() {
       builder: (context) => MyApp(),
       enabled: true,
     ),
-    //MyApp()
   );
 }
 
