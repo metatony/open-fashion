@@ -23,4 +23,5 @@ export 'package:open_fashion/widgets/appbar.dart';
 export 'package:open_fashion/screens/blog_page/blog_tag_widget.dart';
 export 'package:open_fashion/screens/blog_page/blog_container.dart';
 export 'package:provider/provider.dart';
-
+export 'package:open_fashion/models/List.dart';
+export 'package:open_fashion/screens/category/cat_container.dart';

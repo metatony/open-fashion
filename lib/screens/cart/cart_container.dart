@@ -10,10 +10,11 @@ class CartContainer extends StatelessWidget {
     required this.image,
     required this.title,
     required this.body,
-    required this.price,
+    required this.price, required this.index,
   });
 
   final String image, title, body, price;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +42,10 @@ class CartContainer extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           color: Color(0xff888888),
                           fontSize: 12.sp)),
-                  ProductCounter(),
-                  Text('\$' + price,
+                  ProductCounter(
+                    index: index,
+                  ),
+                  Text('\$$price',
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           color: Colors.orange,

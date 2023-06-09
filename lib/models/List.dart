@@ -72,6 +72,8 @@ List blogList = [
   },
 ];
 
+// blog post
+
 List blogPost = [
   {
     'image': 'images/Rectangle 434.png',
@@ -110,3 +112,94 @@ List blogPost = [
         'You guys know how much I love mixing high and low-end – it’s the best way to get the most bang for your buck while still elevating your wardrobe. The same goes for handbags! And honestly they are probably the best pieces to mix and match. I truly think the key to completing a look is with a great bag and I found so many this year that I wanted to share a round-up of my most worn handbags.',
   },
 ];
+
+// category items
+
+List categoryItems = [
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344.png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Frame 18.png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (1).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15 (2).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15 (3).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (2).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (3).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (4).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (1).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (2).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15.png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15 (1).png',
+  },
+];
+
+List catsize = ['S', 'M', 'L'];

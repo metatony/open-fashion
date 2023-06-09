@@ -1,12 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
-
 import '../../utilities/exports.dart';
 
 class ProductCounter extends StatefulWidget {
-  ProductCounter({
-    super.key,
-  });
+  ProductCounter({super.key, required this.index});
+
+  final int index;
 
   @override
   State<ProductCounter> createState() => _ProductCounterState();
@@ -14,7 +13,8 @@ class ProductCounter extends StatefulWidget {
 
 class _ProductCounterState extends State<ProductCounter> {
   int item = 0;
-  int countNum = 0;
+
+  int countNum = 1;
 
   void minusCounter() {
     countNum--;
@@ -26,8 +26,11 @@ class _ProductCounterState extends State<ProductCounter> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<NotifierState>(
-      builder: (context, value, child) => Row(
+    return Consumer<NotifierState>(builder: (context, value, child) {
+      // int originalPrice = int.parse(value.cartItems[widget.index]['price']);
+      // int updatedPrice = originalPrice * countNum;
+
+      return Row(
         children: [
           Card(
             shape: CircleBorder(),
@@ -43,10 +46,7 @@ class _ProductCounterState extends State<ProductCounter> {
                       minusCounter();
                     });
                   },
-                  child: Icon(
-                    Icons.remove,
-                    size: 15,
-                  )),
+                  child: Icon(Icons.remove, size: 15)),
             ),
           ),
           SizedBox(width: 13.w),
@@ -64,12 +64,11 @@ class _ProductCounterState extends State<ProductCounter> {
                   onTap: () {
                     setState(() {
                       addCounter();
+                      // value.cartItems[widget.index]['price'] =
+                      //     updatedPrice.toString();
                     });
                   },
-                  child: Icon(
-                    Icons.add,
-                    size: 15,
-                  )),
+                  child: Icon(Icons.add, size: 15)),
             ),
           ),
           SizedBox(width: 50.w),
@@ -86,14 +85,11 @@ class _ProductCounterState extends State<ProductCounter> {
                     Provider.of<NotifierState>(context, listen: false)
                         .removeItem(item);
                   },
-                  child: Icon(
-                    Icons.close,
-                    size: 15,
-                  )),
+                  child: Icon(Icons.close, size: 15)),
             ),
           ),
         ],
-      ),
-    );
+      );
+    });
   }
 }

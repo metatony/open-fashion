@@ -35,7 +35,8 @@ class Cart extends StatelessWidget {
                       image: value.cartItems[index]['image'],
                       body: value.cartItems[index]['title'],
                       price: value.cartItems[index]['price'],
-                      title: value.cartItems[index]['header'],
+                      title: value.cartItems[index]['header'], 
+                      index: index,
                     );
                   }),
                   value.cartItems.length != value.cartEmpty

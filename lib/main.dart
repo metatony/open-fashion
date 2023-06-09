@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:device_preview/device_preview.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:open_fashion/screens/category/category.dart';
 
 import 'utilities/exports.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
                   appBarTheme: AppBarTheme(color: Color(0xffE7EAEF)),
                   fontFamily: GoogleFonts.tenorSans().fontFamily),
               debugShowCheckedModeBanner: false,
-              home: HomePage()
+              home: Category()
             );
           }),
     );
