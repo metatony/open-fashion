@@ -2,6 +2,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:open_fashion/screens/category/category.dart';
+import 'package:open_fashion/screens/product%20page/product_page.dart';
 
 import 'utilities/exports.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
                   appBarTheme: AppBarTheme(color: Color(0xffE7EAEF)),
                   fontFamily: GoogleFonts.tenorSans().fontFamily),
               debugShowCheckedModeBanner: false,
-              home: Category()
+              home: ProductPage()
             );
           }),
     );

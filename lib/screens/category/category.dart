@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-
 import 'package:open_fashion/utilities/exports.dart';
 
 class Category extends StatelessWidget {
@@ -14,17 +13,32 @@ class Category extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SafeArea(
-          child: ListView.builder(
-            itemCount: categoryItems.length,
-            itemBuilder: (context, index) {
-              return CategoryContainer(
-                body: categoryItems[index]['body'],
-                image: categoryItems[index]['image'],
-                price: categoryItems[index]['price'],
-                rating: categoryItems[index]['rating'],
-                title: categoryItems[index]['title'],
-              );
-            },
+          child: Column(
+            children: [
+              SizedBox(
+                width: double.infinity,
+                child: Row(
+                  children: const [
+                    Text('4500 APPAREL'),
+                  ],
+                ),
+              ),
+              SizedBox(height: 26.h),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: categoryItems.length,
+                  itemBuilder: (context, index) {
+                    return CategoryContainer(
+                      body: categoryItems[index]['body'],
+                      image: categoryItems[index]['image'],
+                      price: categoryItems[index]['price'],
+                      rating: categoryItems[index]['rating'],
+                      title: categoryItems[index]['title'],
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),

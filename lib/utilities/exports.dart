@@ -25,3 +25,5 @@ export 'package:open_fashion/screens/blog_page/blog_container.dart';
 export 'package:provider/provider.dart';
 export 'package:open_fashion/models/List.dart';
 export 'package:open_fashion/screens/category/cat_container.dart';
+export 'package:insta_image_viewer/insta_image_viewer.dart';
+export 'package:open_fashion/screens/product%20page/product_details.dart';

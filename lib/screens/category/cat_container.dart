@@ -1,10 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/material.dart';
-import 'package:open_fashion/models/List.dart';
-import 'package:open_fashion/screens/blog_page/blog_post.dart';
 import 'package:open_fashion/utilities/exports.dart';
-import 'package:page_transition/page_transition.dart';
 
 class CategoryContainer extends StatefulWidget {
   const CategoryContainer({
@@ -24,7 +20,7 @@ class CategoryContainer extends StatefulWidget {
 
 class _CategoryContainerState extends State<CategoryContainer> {
   int? selectedIndex;
-  //bool press = false;
+  bool press = false;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +39,7 @@ class _CategoryContainerState extends State<CategoryContainer> {
             //   ),
             //);
           },
-          child: Container(
+          child: SizedBox(
             height: 134.h,
             width: double.infinity,
             child: Row(
@@ -86,31 +82,48 @@ class _CategoryContainerState extends State<CategoryContainer> {
                         ],
                       ),
 
-                      Row(
-                        children: [
-                          SizedBox(
-                            width: 120.w,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('Size'),
-                                ...List.generate(
-                                  catsize.length,
-                                  (index) {
-                                    return catSize(
-                                      text: catsize[index],
-                                      index: index,
-                                    );
-                                  },
-                                ),
-                              ],
+                      Padding(
+                        padding: const EdgeInsets.only(right: 12.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(
+                              width: 120.w,
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text('Size'),
+                                  ...List.generate(
+                                    catsize.length,
+                                    (index) {
+                                      return catSize(
+                                        text: catsize[index],
+                                        index: index,
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                          )
-                        ],
+                            InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    press = !press;
+                                  });
+                                },
+                                child: Icon(
+                                  press
+                                      ? Icons.favorite
+                                      : Icons.favorite_border,
+                                  color: Colors.orange,
+                                )),
+                          ],
+                        ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
