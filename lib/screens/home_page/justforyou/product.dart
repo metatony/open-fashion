@@ -20,14 +20,15 @@ class Product extends StatelessWidget {
       margin: EdgeInsets.only(left: 10.w),
       child: SizedBox(
         width: 255.w,
-        height: 390.h,
+        //height: 350.h,
         child: Column(
           children: [
             Expanded(
-              child: Image.asset(image),
+              child: Image.asset(image, fit: BoxFit.cover ),
             ),
             SizedBox(height: 4.h),
             Wrap(
+              
               children: [
                 Text(
                   title,

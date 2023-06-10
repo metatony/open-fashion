@@ -1,9 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:provider/provider.dart';
-
 import '../../../utilities/exports.dart';
-import '../../../models/List.dart';
 
 
 class NewArrival extends StatelessWidget {

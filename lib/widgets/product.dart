@@ -19,7 +19,7 @@ class Products extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: Image.asset(image),
+            child: Image.asset(image, fit: BoxFit.cover ),
           ),
           SizedBox(height: 4.h),
           Wrap(

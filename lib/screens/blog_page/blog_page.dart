@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:open_fashion/utilities/exports.dart';
-import 'package:open_fashion/models/List.dart';
 
 class BlogPage extends StatelessWidget {
   const BlogPage({super.key});

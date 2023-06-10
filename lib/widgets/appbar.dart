@@ -58,7 +58,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       decoration: BoxDecoration(
                         color: Colors.orange,
                         shape: BoxShape.circle,
-                        border: Border.all(width: 1.3, color: Colors.white),
+                        border: Border.all(width: 1.3, color: Color(0xffE7EAEF)),
                       ),
                       child: Center(
                         child: Text(

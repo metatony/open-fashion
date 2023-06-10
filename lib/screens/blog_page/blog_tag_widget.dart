@@ -15,12 +15,12 @@ class BlogTagWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 16.w),
       height: 32.h,
-      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
+      padding: EdgeInsets.all(5.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.r),
         color: Color.fromARGB(255, 243, 243, 243),
       ),
-      child: Text(text),
+      child: Center(child: Text(text)),
     );
   }
 }

@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       length: 5,
       child: Scaffold(
         drawer: HomeDrawer(),
-        backgroundColor: Color(0xffE7EAEF),
+        backgroundColor: Colors.white,//Color(0xffE7EAEF),
         appBar: MyAppBar(
           appBar: AppBar(),
         ),
