@@ -57,7 +57,6 @@ class _CategoryContainerState extends State<CategoryContainer> {
                               color: Colors.black,
                               height: 1.5.h,
                               fontSize: 12.sp)),
-                      //SizedBox(height: 8,),
                       Text(widget.body,
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
@@ -70,7 +69,6 @@ class _CategoryContainerState extends State<CategoryContainer> {
                               height: 1.5.h,
                               color: Colors.orange,
                               fontSize: 12.sp)),
-
                       Row(
                         children: [
                           Icon(
@@ -81,7 +79,6 @@ class _CategoryContainerState extends State<CategoryContainer> {
                           Text(widget.rating)
                         ],
                       ),
-
                       Padding(
                         padding: const EdgeInsets.only(right: 12.0),
                         child: Row(

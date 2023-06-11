@@ -7,11 +7,12 @@ import 'package:open_fashion/screens/product%20page/product_page.dart';
 import 'utilities/exports.dart';
 
 void main() {
-  runApp(MyApp()
-   // DevicePreview(
-      //builder: (context) => MyApp(),
-      //enabled: true,
-    //),
+  runApp(
+    //MyApp()
+   DevicePreview(
+      builder: (context) => MyApp(),
+      enabled: true,
+    ),
   );
 }
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
                   appBarTheme: AppBarTheme(color: Color(0xffE7EAEF)),
                   fontFamily: GoogleFonts.tenorSans().fontFamily),
               debugShowCheckedModeBanner: false,
-              home: HomePage()
+              home: ProductPage()
             );
           }),
     );

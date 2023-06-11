@@ -15,13 +15,13 @@ class _ProductPageState extends State<ProductPage> {
     return Scaffold(
         drawer: HomeDrawer(),
         appBar: MyAppBar(appBar: AppBar()),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SafeArea(
-            child: Consumer<NotifierState>(
-              builder: (BuildContext context, value, child) => ListView(
-                children: [
-                  CarouselSlider(
+        body: SafeArea(
+          child: Consumer<NotifierState>(
+            builder: (BuildContext context, value, child) => ListView(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CarouselSlider(
                     items: [
                       ...List.generate(
                         categoryItems.length,
@@ -54,19 +54,19 @@ class _ProductPageState extends State<ProductPage> {
                       },
                     ),
                   ),
-                  SizedBox(height: 17.h),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ...List.generate(value.justForYou.length, (index) {
-                        return pageDot(index: index);
-                      })
-                    ],
-                  ),
-                  SizedBox(height: 17.h),
-                  ProductDetails()
-                ],
-              ),
+                ),
+                SizedBox(height: 17.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ...List.generate(value.justForYou.length, (index) {
+                      return pageDot(index: index);
+                    })
+                  ],
+                ),
+                SizedBox(height: 17.h),
+                ProductDetails()
+              ],
             ),
           ),
         ));

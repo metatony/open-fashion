@@ -1,3 +1,5 @@
+import '../utilities/exports.dart';
+
 List allList = [
   {
     'title': '21WN reversible angora cardigan',
@@ -203,3 +205,94 @@ List categoryItems = [
 ];
 
 List catsize = ['S', 'M', 'L'];
+
+List colorGuide = [Colors.black, Colors.orange, Colors.grey];
+List like = ['Fashion', 'Promo', 'Policy', 'Lookbook'];
+
+//auto recommendation
+List recommend = [
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344.png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Frame 18.png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (1).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15 (2).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15 (3).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (2).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (3).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (4).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (1).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 344 (2).png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15.png',
+  },
+  {
+    'title': 'LAMEREI',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/image 15 (1).png',
+  },
+];
