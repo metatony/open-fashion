@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:open_fashion/screens/product%20page/product_page.dart';
 import 'package:open_fashion/utilities/exports.dart';
+import 'package:page_transition/page_transition.dart';
 
 class CategoryContainer extends StatefulWidget {
   const CategoryContainer({
@@ -9,10 +11,11 @@ class CategoryContainer extends StatefulWidget {
     required this.body,
     required this.image,
     required this.price,
-    required this.rating,
+    required this.rating, required this.productIndex,
   });
 
   final String title, body, image, price, rating;
+  final int productIndex;
 
   @override
   State<CategoryContainer> createState() => _CategoryContainerState();
@@ -28,16 +31,16 @@ class _CategoryContainerState extends State<CategoryContainer> {
       children: [
         InkWell(
           onTap: () {
-            // Navigator.push(
-            //   context,
-            //   PageTransition(
-            //     duration: Duration(milliseconds: 300),
-            //     type: PageTransitionType.leftToRight,
-            //     child: BlogPost(
-            //       currentIndex: index,
-            //     ),
-            //   ),
-            //);
+            Navigator.push(
+              context,
+              PageTransition(
+                duration: Duration(milliseconds: 300),
+                type: PageTransitionType.leftToRight,
+                child: ProductPage(
+                  categoryIndex: widget.productIndex,
+                ),
+              ),
+            );
           },
           child: SizedBox(
             height: 134.h,

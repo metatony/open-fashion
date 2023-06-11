@@ -11,7 +11,7 @@ class ItemDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     recommend.shuffle();
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 16.w),
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: SizedBox(
         width: double.infinity,
         child: Column(
@@ -36,6 +36,21 @@ class ItemDetails extends StatelessWidget {
                 style: TextStyle(fontSize: 14.sp, height: 1.7)),
             SizedBox(height: 30),
             SizedBox(
+                child: Column(
+              children: [
+                ...List.generate(
+                  productCare.length,
+                  (index) {
+                    return ProductCare(
+                      image: productCare[index]['image'],
+                      text: productCare[index]['text'],
+                    );
+                  },
+                ),
+              ],
+            )),
+            SizedBox(height: 20.h),
+            SizedBox(
               width: double.infinity,
               child: Column(
                 //crossAxisAlignment: CrossAxisAlignment.center,
@@ -49,14 +64,17 @@ class ItemDetails extends StatelessWidget {
                     runSpacing: 12.h,
                     spacing: 13.w,
                     children: [
-                      ...List.generate(allList.length, (index) {
-                        return Products(
-                          title: recommend[index]['title'],
-                          price: recommend[index]['price'],
-                          image: recommend[index]['image'],
-                          onPressed: () {},
-                        );
-                      })
+                      ...List.generate(
+                        allList.length,
+                        (index) {
+                          return Products(
+                            title: recommend[index]['title'],
+                            price: recommend[index]['price'],
+                            image: recommend[index]['image'],
+                            onPressed: () {},
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ],
@@ -65,6 +83,52 @@ class ItemDetails extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+List productCare = [
+  {
+    'image': 'icons/Do Not Bleach.png',
+    'text': 'Do not use bleach',
+  },
+  {
+    'image': 'icons/Do Not Tumble Dry.png',
+    'text': 'Do not tumble dry',
+  },
+  {
+    'image': 'icons/Do Not Wash.png',
+    'text': 'Dry clean with tetrachloroethylene',
+  },
+  {
+    'image': 'icons/Iron Low Temperature.png',
+    'text': 'Iron at a maximum of 110ºC/230ºF',
+  }
+];
+
+class ProductCare extends StatelessWidget {
+  const ProductCare({
+    super.key,
+    required this.image,
+    required this.text,
+  });
+
+  final String image, text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        ImageIcon(
+          AssetImage(image),
+          size: 24,
+        ),
+        SizedBox(width: 12.w),
+        Text(
+          text,
+          style: TextStyle(fontSize: 12.sp),
+        ),
+      ],
     );
   }
 }

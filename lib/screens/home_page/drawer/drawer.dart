@@ -65,16 +65,16 @@ class HomeDrawer extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ProductPage()));
-                },
-                child: Text(
-                  'Blog',
-                  textAlign: TextAlign.start,
-                ),
-              ),
+              // TextButton(
+              //   onPressed: () {
+              //     Navigator.push(context,
+              //         MaterialPageRoute(builder: (context) => ProductPage()));
+              //   },
+              //   child: Text(
+              //     'Blog',
+              //     textAlign: TextAlign.start,
+              //   ),
+              // ),
 
               TextButton(
                 onPressed: () {

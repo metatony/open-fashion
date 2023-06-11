@@ -52,9 +52,11 @@ class NotifierState extends ChangeNotifier {
 
   //add items to cart
   void addToCart(int index) {
-    cartItems.add(allList[index]);
+    cartItems.add(categoryItems[index]);
     notifyListeners();
   }
+
+  
 
   //remove items from cart
   void removeItem(int index) {

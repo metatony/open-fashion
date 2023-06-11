@@ -1,15 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:math';
-
 import 'package:open_fashion/screens/product%20page/addtobasket.dart';
 import 'package:open_fashion/screens/product%20page/item_details.dart';
 
 import '../../utilities/exports.dart';
 
 class ProductDetails extends StatefulWidget {
+  final int addtobasket;
   const ProductDetails({
-    super.key,
+    super.key, required this.addtobasket,
   });
 
   @override
@@ -40,14 +39,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Icon(Icons.arrow_circle_up)
                     ],
                   ),
-                  SizedBox(height: 8.h),
+                  SizedBox(height: 5.h),
                   Text('Recycle Boucle Knit Cardigan Pink'),
                   SizedBox(height: 8.h),
                   Text(
                     '\$120',
                     style: TextStyle(color: Colors.orange),
                   ),
-                  SizedBox(height: 18.h),
+                  SizedBox(height: 10.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -101,11 +100,13 @@ class _ProductDetailsState extends State<ProductDetails> {
             ),
           ),
 
-          SizedBox(height: 24.h),
+          SizedBox(height: 25.h),
           //button
-          AddToBasket(),
+          AddToBasket(
+            index: widget.addtobasket,
+          ),
           SizedBox(height: 16.h),
-          ItemDetails()
+          ItemDetails(),
         ],
       ),
     );

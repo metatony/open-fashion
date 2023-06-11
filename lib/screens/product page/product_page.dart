@@ -3,8 +3,10 @@
 import 'package:open_fashion/utilities/exports.dart';
 
 class ProductPage extends StatefulWidget {
-  const ProductPage({super.key});
+   final int categoryIndex;
 
+  const ProductPage({super.key,  required this.categoryIndex});
+  
   @override
   State<ProductPage> createState() => _ProductPageState();
 }
@@ -25,14 +27,13 @@ class _ProductPageState extends State<ProductPage> {
                     items: [
                       ...List.generate(
                         categoryItems.length,
-                        //value.justForYou.length,
                         (index) {
                           return SizedBox(
                             height: 460.h,
                             width: double.infinity,
                             child: InstaImageViewer(
                               child: Image.asset(
-                                categoryItems[11]['image'],
+                                categoryItems[index]['image'],
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -55,7 +56,7 @@ class _ProductPageState extends State<ProductPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 17.h),
+                SizedBox(height: 10.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -64,16 +65,16 @@ class _ProductPageState extends State<ProductPage> {
                     })
                   ],
                 ),
-                SizedBox(height: 17.h),
-                ProductDetails()
+                SizedBox(height: 15.h),
+                ProductDetails(
+                  addtobasket: widget.categoryIndex,
+                )
               ],
             ),
           ),
         ));
   }
 }
-
-
 
 Consumer<Object?> pageDot({required int index}) {
   return Consumer<NotifierState>(

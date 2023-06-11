@@ -27,7 +27,7 @@ List allList = [
   }
 ];
 
-// blog list
+// blog list////////////////////////////////////
 
 List blogList = [
   {
@@ -74,7 +74,7 @@ List blogList = [
   },
 ];
 
-// blog post
+// blog post////////////////////////////////////////
 
 List blogPost = [
   {
@@ -115,7 +115,7 @@ List blogPost = [
   },
 ];
 
-// category items
+// category items/////////////////////////////
 
 List categoryItems = [
   {
@@ -124,6 +124,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344.png',
+    'image2' : 'images/Rectangle 344.png'
   },
   {
     'title': 'LAMEREI',
@@ -131,6 +132,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Frame 18.png',
+     'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -138,6 +140,8 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344 (1).png',
+    'image2' : 'images/Rectangle 344 (2).png'
+
   },
   {
     'title': 'LAMEREI',
@@ -145,6 +149,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/image 15 (2).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -152,6 +157,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/image 15 (3).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -159,6 +165,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344 (2).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -166,6 +173,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344 (3).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -173,6 +181,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344 (4).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -180,6 +189,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344 (1).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -187,6 +197,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/Rectangle 344 (2).png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -194,6 +205,7 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/image 15.png',
+    'image2' : 'images/Frame 18.png'
   },
   {
     'title': 'LAMEREI',
@@ -201,15 +213,24 @@ List categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/image 15 (1).png',
+    'image2' : 'images/Frame 18.png'
   },
 ];
+List productImages = [
+  ['images/Rectangle 344.png','images/Rectangle 344.png','images/Rectangle 344.png'],
+  ['images/Frame 18.png', 'images/Frame 18.png', 'images/Frame 18.png'],
+];
 
+////category size//////////////////////////
 List catsize = ['S', 'M', 'L'];
 
+//// colorguide///////////////////////////
 List colorGuide = [Colors.black, Colors.orange, Colors.grey];
+
+//// blofg carousel ////////////////////////////
 List like = ['Fashion', 'Promo', 'Policy', 'Lookbook'];
 
-//auto recommendation
+//auto recommendation////////////////////
 List recommend = [
   {
     'title': 'LAMEREI',

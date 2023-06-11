@@ -33,10 +33,11 @@ class Cart extends StatelessWidget {
                   ...List.generate(value.cartItems.length, (index) {
                     return CartContainer(
                       image: value.cartItems[index]['image'],
-                      body: value.cartItems[index]['title'],
+                      body: value.cartItems[index]['body'],
                       price: value.cartItems[index]['price'],
-                      title: value.cartItems[index]['header'], 
-                      index: index,
+                      title: value.cartItems[index]['title'], 
+                      index: index, 
+                      //rating: value.cartItems[index]['rating'],
                     );
                   }),
                   value.cartItems.length != value.cartEmpty

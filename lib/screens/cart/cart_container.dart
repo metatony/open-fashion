@@ -10,7 +10,7 @@ class CartContainer extends StatelessWidget {
     required this.image,
     required this.title,
     required this.body,
-    required this.price, required this.index,
+    required this.price, required this.index, 
   });
 
   final String image, title, body, price;

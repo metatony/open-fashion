@@ -6,7 +6,8 @@ class Products extends StatelessWidget {
     super.key,
     required this.title,
     required this.price,
-    required this.image, required this.onPressed,
+    required this.image,
+    required this.onPressed,
   });
   final String title, price, image;
   final Function()? onPressed;
@@ -17,25 +18,26 @@ class Products extends StatelessWidget {
       width: 165.w,
       height: 260.h,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Image.asset(image, fit: BoxFit.cover ),
+            child: Image.asset(image, fit: BoxFit.cover),
           ),
           SizedBox(height: 4.h),
           Wrap(
             children: [
-              Text(title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      height: 1.2.h,
-                      fontSize: 12.sp)),
+              Text(
+                title,
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    height: 1.2.h,
+                    fontSize: 12.sp),
+              ),
             ],
           ),
           GestureDetector(
             onTap: onPressed,
             child: Text('\$' + price,
-                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     color: Colors.orange,

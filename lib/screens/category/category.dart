@@ -33,7 +33,8 @@ class Category extends StatelessWidget {
                       image: categoryItems[index]['image'],
                       price: categoryItems[index]['price'],
                       rating: categoryItems[index]['rating'],
-                      title: categoryItems[index]['title'],
+                      title: categoryItems[index]['title'], 
+                      productIndex: index,
                     );
                   },
                 ),
