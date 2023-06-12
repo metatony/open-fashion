@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:open_fashion/screens/product%20page/product_page.dart';
+import 'package:page_transition/page_transition.dart';
+
 import '../../utilities/exports.dart';
 
 class ItemDetails extends StatelessWidget {
@@ -10,6 +13,7 @@ class ItemDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     recommend.shuffle();
+
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: SizedBox(
@@ -71,7 +75,18 @@ class ItemDetails extends StatelessWidget {
                             title: recommend[index]['title'],
                             price: recommend[index]['price'],
                             image: recommend[index]['image'],
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                PageTransition(
+                                  duration: Duration(milliseconds: 300),
+                                  type: PageTransitionType.leftToRight,
+                                  child: ProductPage(
+                                    categoryIndex: index,
+                                  ),
+                                ),
+                              );
+                            },
                           );
                         },
                       ),

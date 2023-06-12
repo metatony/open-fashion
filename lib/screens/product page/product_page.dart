@@ -3,17 +3,21 @@
 import 'package:open_fashion/utilities/exports.dart';
 
 class ProductPage extends StatefulWidget {
-   final int categoryIndex;
+  final int categoryIndex;
 
-  const ProductPage({super.key,  required this.categoryIndex});
-  
+  const ProductPage({super.key, required this.categoryIndex});
+
   @override
   State<ProductPage> createState() => _ProductPageState();
 }
 
 class _ProductPageState extends State<ProductPage> {
+
   @override
   Widget build(BuildContext context) {
+
+    List<String> images = categoryItems[widget.categoryIndex]['image2'];
+
     return Scaffold(
         drawer: HomeDrawer(),
         appBar: MyAppBar(appBar: AppBar()),
@@ -24,23 +28,22 @@ class _ProductPageState extends State<ProductPage> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: CarouselSlider(
-                    items: [
-                      ...List.generate(
-                        categoryItems.length,
-                        (index) {
-                          return SizedBox(
+                    items: 
+                      images.map((image) {
+                        return SizedBox(
                             height: 460.h,
                             width: double.infinity,
                             child: InstaImageViewer(
                               child: Image.asset(
-                                categoryItems[index]['image'],
+                                image,
                                 fit: BoxFit.cover,
                               ),
                             ),
                           );
-                        },
-                      ),
-                    ],
+                      }
+                      
+                       ).toList(),
+                    
                     options: CarouselOptions(
                       height: 460.h,
                       autoPlay: false,

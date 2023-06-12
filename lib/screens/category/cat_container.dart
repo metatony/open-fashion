@@ -146,7 +146,7 @@ class _CategoryContainerState extends State<CategoryContainer> {
         height: 24.h,
         width: 24.w,
         decoration: BoxDecoration(
-          color: index == selectedIndex ? Colors.orange : Colors.white,
+          color: index == selectedIndex ? Color(0xff333333) : Colors.white,
           border: Border.all(
               color: index == selectedIndex ? Colors.white : Colors.grey),
           borderRadius: BorderRadius.circular(50.r),

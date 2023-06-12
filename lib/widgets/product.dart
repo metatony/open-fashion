@@ -21,7 +21,8 @@ class Products extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Image.asset(image, fit: BoxFit.cover),
+            child: GestureDetector(
+                onTap: onPressed, child: Image.asset(image, fit: BoxFit.cover)),
           ),
           SizedBox(height: 4.h),
           Wrap(
@@ -35,14 +36,11 @@ class Products extends StatelessWidget {
               ),
             ],
           ),
-          GestureDetector(
-            onTap: onPressed,
-            child: Text('\$' + price,
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.orange,
-                    fontSize: 14.sp)),
-          ),
+          Text('\$' + price,
+              style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.orange,
+                  fontSize: 14.sp)),
         ],
       ),
     );
