@@ -119,7 +119,7 @@ List blogPost = [
 
 List categoryItems = [
   {
-    'id': 1,
+    'id': 0,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -132,7 +132,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 2,
+    'id': 1,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -145,7 +145,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 3,
+    'id': 2,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -158,7 +158,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 4,
+    'id': 3,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -171,7 +171,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 5,
+    'id': 4,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -184,7 +184,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 6,
+    'id': 5,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -197,7 +197,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 7,
+    'id': 6,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -210,7 +210,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 8,
+    'id': 7,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -223,7 +223,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 9,
+    'id': 8,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -236,7 +236,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 10,
+    'id': 9,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -249,7 +249,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 11,
+    'id': 10,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -262,7 +262,7 @@ List categoryItems = [
     ]
   },
   {
-    'id': 12,
+    'id': 11,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -288,7 +288,7 @@ List like = ['Fashion', 'Promo', 'Policy', 'Lookbook'];
 //auto recommendation////////////////////
 List recommend = [
   {
-    'id': 1,
+    'id': 0,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -296,7 +296,7 @@ List recommend = [
     'image': 'images/Rectangle 344.png',
   },
   {
-    'id': 2,
+    'id': 1,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -304,7 +304,7 @@ List recommend = [
     'image': 'images/Frame 18.png',
   },
   {
-    'id': 3,
+    'id': 2,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -312,7 +312,7 @@ List recommend = [
     'image': 'images/Rectangle 344 (1).png',
   },
   {
-    'id': 4,
+    'id': 3,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -320,7 +320,7 @@ List recommend = [
     'image': 'images/image 15 (2).png',
   },
   {
-    'id': 5,
+    'id': 4,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -328,7 +328,7 @@ List recommend = [
     'image': 'images/image 15 (3).png',
   },
   {
-    'id': 6,
+    'id': 5,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -336,7 +336,7 @@ List recommend = [
     'image': 'images/Rectangle 344 (2).png',
   },
   {
-    'id': 7,
+    'id': 6,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -344,7 +344,7 @@ List recommend = [
     'image': 'images/Rectangle 344 (3).png',
   },
   {
-    'id': 8,
+    'id': 7,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -352,7 +352,7 @@ List recommend = [
     'image': 'images/Rectangle 344 (4).png',
   },
   {
-    'id': 9,
+    'id': 8,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -360,7 +360,7 @@ List recommend = [
     'image': 'images/Rectangle 344 (1).png',
   },
   {
-    'id': 10,
+    'id': 9,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -368,7 +368,7 @@ List recommend = [
     'image': 'images/Rectangle 344 (2).png',
   },
   {
-    'id': 11,
+    'id': 10,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',
@@ -376,7 +376,7 @@ List recommend = [
     'image': 'images/image 15.png',
   },
   {
-    'id': 12,
+    'id': 11,
     'title': 'LAMEREI',
     'body': 'Recycle Boucle Knit Cardigan Pink',
     'price': '120',

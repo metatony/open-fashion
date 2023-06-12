@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
-
+export 'package:open_fashion/screens/product%20page/product_page.dart';
 import 'package:open_fashion/screens/product%20page/product_page.dart';
-import 'package:page_transition/page_transition.dart';
 
 import '../../utilities/exports.dart';
 
@@ -12,7 +11,9 @@ class ItemDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    recommend.shuffle();
+    //recommend.shuffle();
+      List<int> originalOrder = List.generate(recommend.length, (index) => index);
+      List<int> shuffledOrder = List.from(originalOrder)..shuffle();
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
@@ -82,6 +83,7 @@ class ItemDetails extends StatelessWidget {
                                   duration: Duration(milliseconds: 300),
                                   type: PageTransitionType.leftToRight,
                                   child: ProductPage(
+                                    //key: ValueKey(categoryItems[index]['id']),
                                     categoryIndex: index,
                                   ),
                                 ),
@@ -98,52 +100,6 @@ class ItemDetails extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-List productCare = [
-  {
-    'image': 'icons/Do Not Bleach.png',
-    'text': 'Do not use bleach',
-  },
-  {
-    'image': 'icons/Do Not Tumble Dry.png',
-    'text': 'Do not tumble dry',
-  },
-  {
-    'image': 'icons/Do Not Wash.png',
-    'text': 'Dry clean with tetrachloroethylene',
-  },
-  {
-    'image': 'icons/Iron Low Temperature.png',
-    'text': 'Iron at a maximum of 110ºC/230ºF',
-  }
-];
-
-class ProductCare extends StatelessWidget {
-  const ProductCare({
-    super.key,
-    required this.image,
-    required this.text,
-  });
-
-  final String image, text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        ImageIcon(
-          AssetImage(image),
-          size: 24,
-        ),
-        SizedBox(width: 12.w),
-        Text(
-          text,
-          style: TextStyle(fontSize: 12.sp),
-        ),
-      ],
     );
   }
 }

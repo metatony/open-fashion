@@ -29,3 +29,5 @@ export 'package:insta_image_viewer/insta_image_viewer.dart';
 export 'package:open_fashion/screens/product%20page/product_details.dart';
 export 'package:open_fashion/screens/product%20page/colorwidget.dart';
 export 'package:open_fashion/screens/product%20page/sizewidget.dart';
+export 'package:open_fashion/screens/product%20page/product_care.dart';
+export 'package:page_transition/page_transition.dart';
