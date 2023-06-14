@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:open_fashion/screens/blog_page/blog_page.dart';
 import 'package:open_fashion/screens/category/category.dart';
-import 'package:open_fashion/screens/product%20page/product_page.dart';
-import 'package:provider/provider.dart';
 
 import '../../../utilities/exports.dart';
 
@@ -65,16 +63,6 @@ class HomeDrawer extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
               ),
-              // TextButton(
-              //   onPressed: () {
-              //     Navigator.push(context,
-              //         MaterialPageRoute(builder: (context) => ProductPage()));
-              //   },
-              //   child: Text(
-              //     'Blog',
-              //     textAlign: TextAlign.start,
-              //   ),
-              // ),
 
               TextButton(
                 onPressed: () {

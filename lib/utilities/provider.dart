@@ -31,7 +31,7 @@ class NotifierState extends ChangeNotifier {
       'image': 'images/Rectangle 321 (1).png',
     },
     {
-      'title': '1WN reversible angora cardigan',
+      'title': '1WN reversible angora cardigan SW1WJ285-AM',
       'price': '\$120',
       'image': 'images/Rectangle 321.png',
     }

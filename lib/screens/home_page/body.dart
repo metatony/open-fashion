@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            HomeBanner(),
+            //HomeBanner(),
             SizedBox(height: 27.h),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),

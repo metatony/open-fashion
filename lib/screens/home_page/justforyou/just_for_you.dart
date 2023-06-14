@@ -37,8 +37,8 @@ class _JustForYouState extends State<JustForYou> {
               options: CarouselOptions(
                 height: 390.h,
                 autoPlay: true,
-                enlargeCenterPage: true,
-                viewportFraction: 0.6,
+                //enlargeCenterPage: true,
+                viewportFraction: 0.7,
                 enableInfiniteScroll: false,
                 autoPlayAnimationDuration: Duration(milliseconds: 800),
                 onPageChanged: (index, reason) {

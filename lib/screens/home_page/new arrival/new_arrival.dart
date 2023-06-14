@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import '../../../utilities/exports.dart';
+import 'package:open_fashion/screens/category/category.dart';
+import 'package:open_fashion/screens/product%20page/product_page.dart';
 
+import '../../../utilities/exports.dart';
 
 class NewArrival extends StatelessWidget {
   const NewArrival({
@@ -31,12 +33,23 @@ class NewArrival extends StatelessWidget {
             children: [
               ...List.generate(allList.length, (index) {
                 return Products(
-                  title: allList[index]['title'],
-                  price: allList[index]['price'],
-                  image: allList[index]['image'],
+                  title: categoryItems[index]['title'],
+                  price: categoryItems[index]['price'],
+                  image: categoryItems[index]['image'],
                   onPressed: () {
-                    Provider.of<NotifierState>(context, listen: false)
-                        .addToCart(index);
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        duration: Duration(milliseconds: 300),
+                        type: PageTransitionType.leftToRight,
+                        child: ProductPage(
+                          //key: ValueKey(categoryItems[index]['id']),
+                          categoryIndex: index,
+                        ),
+                      ),
+                    );
+                    // Provider.of<NotifierState>(context, listen: false)
+                    //     .addToCart(index);
                   },
                 );
               })
@@ -45,8 +58,19 @@ class NewArrival extends StatelessWidget {
           SizedBox(
             height: 27.h,
           ),
-          InkWell(
-            onTap: () {},
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                PageTransition(
+                  duration: Duration(milliseconds: 300),
+                  type: PageTransitionType.leftToRight,
+                  child: Category(
+                      //key: ValueKey(categoryItems[index]['id']),
+                      ),
+                ),
+              );
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

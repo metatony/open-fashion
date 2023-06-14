@@ -11,9 +11,9 @@ class ItemDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //recommend.shuffle();
-      List<int> originalOrder = List.generate(recommend.length, (index) => index);
-      List<int> shuffledOrder = List.from(originalOrder)..shuffle();
+    recommend.shuffle();
+    // List<int> originalOrder = List.generate(recommend.length, (index) => index);
+    // List<int> shuffledOrder = List.from(originalOrder)..shuffle();
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
