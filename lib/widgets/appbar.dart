@@ -1,8 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/screens/cart/cart_page.dart';
-import 'package:page_transition/page_transition.dart';
-
 import '../utilities/exports.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -27,7 +24,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         title: Image.asset('images/Logo.png'),
         actions: [
-          Image.asset('images/Search.png'),
+          SearchIcon(),
           Stack(
             alignment: Alignment.center,
             children: [
@@ -46,30 +43,30 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     AssetImage('images/shopping bag.png'),
                     color: Color.fromARGB(255, 26, 25, 25),
                   )),
-          
               if (value.cartItems.length != 0)
                 Positioned(
-                    top: 3,
-                    right: 20,
-                    child: Container(
-                      padding: EdgeInsets.all(2),
-                      height: 20,
-                      width: 20,
-                      decoration: BoxDecoration(
-                        color: Colors.orange,
-                        shape: BoxShape.circle,
-                        border: Border.all(width: 1.3, color: Color(0xffE7EAEF)),
+                  top: 3,
+                  right: 20,
+                  child: Container(
+                    padding: EdgeInsets.all(2),
+                    height: 20,
+                    width: 20,
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      shape: BoxShape.circle,
+                      border: Border.all(width: 1.3, color: Color(0xffE7EAEF)),
+                    ),
+                    child: Center(
+                      child: Text(
+                        value.cartItems.length.toString(),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold),
                       ),
-                      child: Center(
-                        child: Text(
-                          value.cartItems.length.toString(),
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ))
+                    ),
+                  ),
+                ),
             ],
           )
         ],

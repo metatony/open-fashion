@@ -48,8 +48,6 @@ class NewArrival extends StatelessWidget {
                         ),
                       ),
                     );
-                    // Provider.of<NotifierState>(context, listen: false)
-                    //     .addToCart(index);
                   },
                 );
               })

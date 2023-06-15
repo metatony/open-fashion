@@ -10,7 +10,7 @@ class BlogContainer extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    required this.body,
+     required this.body,
     required this.date,
     required this.index,
   });

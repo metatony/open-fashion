@@ -58,7 +58,6 @@ class ItemDetails extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: Column(
-                //crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   HeaderTitle(header: 'YOU MAY ALSO LIKE'),
                   SizedBox(height: 5.h),
@@ -83,7 +82,7 @@ class ItemDetails extends StatelessWidget {
                                   duration: Duration(milliseconds: 300),
                                   type: PageTransitionType.leftToRight,
                                   child: ProductPage(
-                                    //key: ValueKey(categoryItems[index]['id']),
+                                    //key: ValueKey(recommend[index]['id']),
                                     categoryIndex: index,
                                   ),
                                 ),

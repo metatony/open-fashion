@@ -31,3 +31,6 @@ export 'package:open_fashion/screens/product%20page/colorwidget.dart';
 export 'package:open_fashion/screens/product%20page/sizewidget.dart';
 export 'package:open_fashion/screens/product%20page/product_care.dart';
 export 'package:page_transition/page_transition.dart';
+export 'package:search_page/search_page.dart';
+export 'package:open_fashion/widgets/search_icon.dart';
+export 'package:open_fashion/screens/cart/cart_page.dart';

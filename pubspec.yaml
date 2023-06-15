@@ -45,6 +45,7 @@ dependencies:
   footer: ^0.0.4
   animations: ^2.0.7
   insta_image_viewer: ^1.0.2
+  search_page: ^2.3.0
 
 dev_dependencies:
   flutter_test:
