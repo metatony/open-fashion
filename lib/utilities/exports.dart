@@ -37,3 +37,5 @@ export 'package:open_fashion/screens/cart/cart_page.dart';
 export 'package:open_fashion/screens/checkout/Form.dart';
 export 'package:open_fashion/widgets/checkout_button.dart';
 export 'package:open_fashion/screens/product%20page/addtobasket.dart';
+export 'package:open_fashion/models/product_list.dart';
+export 'package:open_fashion/models/product_recomend.dart';
