@@ -8,6 +8,8 @@
 - [x] Checkout 
 - [x] Search for products
 - [x] Blog page
+- [x] Paystack integration
+
 
 New features coming soon
 
