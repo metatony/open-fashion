@@ -1,7 +1,8 @@
 import '../../utilities/exports.dart';
 
-class ColorWidget extends StatelessWidget {
-  ColorWidget({
+// ignore: must_be_immutable
+class ProductColorWidget extends StatelessWidget {
+  ProductColorWidget({
     super.key,
     required this.color,
     required this.index,

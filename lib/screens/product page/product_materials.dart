@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 export 'package:open_fashion/screens/product%20page/product_page.dart';
-import 'package:open_fashion/screens/product%20page/product_page.dart';
+import 'package:open_fashion/screens/product%20page/may_like.dart';
 
 import '../../utilities/exports.dart';
 
-class ItemDetails extends StatelessWidget {
-  const ItemDetails({
+class ProductMaterials extends StatelessWidget {
+  const ProductMaterials({
     super.key,
   });
 
@@ -55,50 +55,12 @@ class ItemDetails extends StatelessWidget {
               ],
             )),
             SizedBox(height: 20.h),
-            SizedBox(
-              width: double.infinity,
-              child: Column(
-                children: [
-                  HeaderTitle(header: 'YOU MAY ALSO LIKE'),
-                  SizedBox(height: 5.h),
-                  Div(),
-                  SizedBox(height: 10.h),
-                  Wrap(
-                    alignment: WrapAlignment.start,
-                    runSpacing: 12.h,
-                    spacing: 13.w,
-                    children: [
-                      ...List.generate(
-                        allList.length,
-                        (index) {
-                          return Products(
-                            title: recommend[index]['title'],
-                            price: recommend[index]['price'],
-                            image: recommend[index]['image'],
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                PageTransition(
-                                  duration: Duration(milliseconds: 300),
-                                  type: PageTransitionType.leftToRight,
-                                  child: ProductPage(
-                                    //key: ValueKey(recommend[index]['id']),
-                                    categoryIndex: index,
-                                  ),
-                                ),
-                              );
-                            },
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            )
+            YouMayLike()
           ],
         ),
       ),
     );
   }
 }
+
+

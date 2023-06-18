@@ -2,8 +2,9 @@
 
 import '../../utilities/exports.dart';
 
-class SizeWidget extends StatelessWidget {
-  SizeWidget({
+// ignore: must_be_immutable
+class ProductSizeWidget extends StatelessWidget {
+  ProductSizeWidget({
     super.key,
     required this.text,
     required this.index,

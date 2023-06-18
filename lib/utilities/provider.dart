@@ -2,9 +2,8 @@
 
 import 'package:open_fashion/utilities/exports.dart';
 
-import '../models/List.dart';
-
 class NotifierState extends ChangeNotifier {
+  
   //home page tabb bar  list
   List tab = ['All', 'Apparel', 'Dress', 'Tshirt', 'Bag'];
 
@@ -37,8 +36,6 @@ class NotifierState extends ChangeNotifier {
     }
   ];
 
-  
-
   //dropdown menu list
 
   List menuList = ['New', 'Apparel', 'Bag', 'Shoes', 'Beauty', 'Accessories'];
@@ -55,8 +52,6 @@ class NotifierState extends ChangeNotifier {
     cartItems.add(categoryItems[index]);
     notifyListeners();
   }
-
-  
 
   //remove items from cart
   void removeItem(int index) {
@@ -76,6 +71,5 @@ class NotifierState extends ChangeNotifier {
   //to control text widget display when cart is empty
   int cartEmpty = 0;
 
-  //logic for item counter in cart
-
+  List indicator = ['', '', ''];
 }

@@ -1,21 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/screens/product%20page/addtobasket.dart';
-import 'package:open_fashion/screens/product%20page/item_details.dart';
-
 import '../../utilities/exports.dart';
+import 'product_materials.dart';
 
-class ProductDetails extends StatefulWidget {
+class ProductBody extends StatefulWidget {
   final int addtobasket;
-  const ProductDetails({
-    super.key, required this.addtobasket,
+  const ProductBody({
+    super.key,
+    required this.addtobasket,
   });
 
   @override
-  State<ProductDetails> createState() => _ProductDetailsState();
+  State<ProductBody> createState() => _ProductBodyState();
 }
 
-class _ProductDetailsState extends State<ProductDetails> {
+class _ProductBodyState extends State<ProductBody> {
   int? selectedColor;
   int? selectedSize;
 
@@ -56,9 +55,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('Color'),
-                            ...List.generate(colorGuide.length, (index) {
-                              return ColorWidget(
-                                color: colorGuide[index],
+                            ...List.generate(productcolor.length, (index) {
+                              return ProductColorWidget(
+                                color: productcolor[index],
                                 index: index,
                                 selectedColor: selectedColor,
                                 onTap: () {
@@ -77,9 +76,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('Size'),
-                            ...List.generate(catsize.length, (index) {
-                              return SizeWidget(
-                                text: catsize[index],
+                            ...List.generate(productsize.length, (index) {
+                              return ProductSizeWidget(
+                                text: productsize[index],
                                 index: index,
                                 onTap: () {
                                   setState(() {
@@ -106,7 +105,7 @@ class _ProductDetailsState extends State<ProductDetails> {
             index: widget.addtobasket,
           ),
           SizedBox(height: 16.h),
-          ItemDetails(),
+          ProductMaterials(),
         ],
       ),
     );

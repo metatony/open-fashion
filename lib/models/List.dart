@@ -474,10 +474,10 @@ List<Map<String, dynamic>> categoryItems = [
 ];
 
 ////category size//////////////////////////
-List catsize = ['S', 'M', 'L'];
+List productsize = ['S', 'M', 'L'];
 
 //// colorguide///////////////////////////
-List colorGuide = [Colors.black, Colors.orange, Colors.grey];
+List productcolor = [Colors.black, Colors.orange, Colors.grey];
 
 //// blofg carousel ////////////////////////////
 List like = ['Fashion', 'Promo', 'Policy', 'Lookbook'];

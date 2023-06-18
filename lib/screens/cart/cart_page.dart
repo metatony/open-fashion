@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:open_fashion/screens/cart/cart_container.dart';
+import 'package:open_fashion/screens/checkout/checkout_details.dart';
 import 'package:open_fashion/utilities/exports.dart';
 
 class Cart extends StatelessWidget {
@@ -35,12 +36,11 @@ class Cart extends StatelessWidget {
                       image: value.cartItems[index]['image'],
                       body: value.cartItems[index]['body'],
                       price: value.cartItems[index]['price'],
-                      title: value.cartItems[index]['title'], 
-                      index: index, 
-                      //rating: value.cartItems[index]['rating'],
+                      title: value.cartItems[index]['title'],
+                      index: index,
                     );
                   }),
-                  value.cartItems.length != value.cartEmpty
+                  value.cartItems.isNotEmpty
                       ? SizedBox(
                           child: Column(
                             children: [
@@ -60,7 +60,7 @@ class Cart extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    '\$' + value.calculateTotalPrice(),
+                                    '\$${value.calculateTotalPrice()}',
                                     style: TextStyle(
                                       letterSpacing: 2,
                                       fontSize: 16.sp,
@@ -83,7 +83,7 @@ class Cart extends StatelessWidget {
                       : SizedBox(),
                   Center(
                     child: Text(
-                      value.cartItems.length != value.cartEmpty
+                      value.cartItems.isNotEmpty
                           ? ''
                           : 'You have no items in your Shopping Bag.',
                       style: TextStyle(
@@ -98,7 +98,20 @@ class Cart extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: GestureDetector(
-          onTap: () {},
+          onTap: () {
+            if (value.cartItems.isNotEmpty) {
+              Navigator.push(
+                context,
+                PageTransition(
+                  duration: Duration(milliseconds: 250),
+                  type: PageTransitionType.leftToRight,
+                  child: CheckoutDetails(),
+                ),
+              );
+            } else {
+              Navigator.pop(context);
+            }
+          },
           child: Container(
             padding: EdgeInsets.all(10),
             height: 100.h,

@@ -11,7 +11,8 @@ class CategoryContainer extends StatefulWidget {
     required this.body,
     required this.image,
     required this.price,
-    required this.rating, required this.productIndex,
+    required this.rating,
+    required this.productIndex,
   });
 
   final String title, body, image, price, rating;
@@ -95,10 +96,10 @@ class _CategoryContainerState extends State<CategoryContainer> {
                                 children: [
                                   Text('Size'),
                                   ...List.generate(
-                                    catsize.length,
+                                    productsize.length,
                                     (index) {
                                       return catSize(
-                                        text: catsize[index],
+                                        text: productsize[index],
                                         index: index,
                                       );
                                     },

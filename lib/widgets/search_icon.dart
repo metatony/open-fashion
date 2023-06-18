@@ -1,15 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:open_fashion/screens/product%20page/product_page.dart';
-
 import '../utilities/exports.dart';
 
 class SearchIcon extends StatelessWidget {
   const SearchIcon({
     super.key,
   });
-
-  final int index = 0;
 
   @override
   Widget build(BuildContext context) {

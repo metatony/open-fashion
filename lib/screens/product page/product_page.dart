@@ -12,10 +12,8 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
-
   @override
   Widget build(BuildContext context) {
-
     List<String> images = categoryItems[widget.categoryIndex]['image2'];
 
     return Scaffold(
@@ -28,22 +26,18 @@ class _ProductPageState extends State<ProductPage> {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: CarouselSlider(
-                    items: 
-                      images.map((image) {
-                        return SizedBox(
-                            height: 460.h,
-                            width: double.infinity,
-                            child: InstaImageViewer(
-                              child: Image.asset(
-                                image,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          );
-                      }
-                      
-                       ).toList(),
-                    
+                    items: images.map((image) {
+                      return SizedBox(
+                        height: 460.h,
+                        width: double.infinity,
+                        child: InstaImageViewer(
+                          child: Image.asset(
+                            image,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      );
+                    }).toList(),
                     options: CarouselOptions(
                       height: 460.h,
                       autoPlay: false,
@@ -63,13 +57,13 @@ class _ProductPageState extends State<ProductPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ...List.generate(value.justForYou.length, (index) {
+                    ...List.generate(value.indicator.length, (index) {
                       return pageDot(index: index);
                     })
                   ],
                 ),
                 SizedBox(height: 15.h),
-                ProductDetails(
+                ProductBody(
                   addtobasket: widget.categoryIndex,
                 )
               ],
