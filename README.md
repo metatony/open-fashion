@@ -8,7 +8,7 @@
 - [x] Checkout 
 - [x] Search for products
 - [x] Blog page
-- New features coming soon
+New features coming soon
 
 
 
