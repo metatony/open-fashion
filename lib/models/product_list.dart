@@ -379,4 +379,60 @@ List<Map<String, dynamic>> categoryItems = [
       'images/ring4.png',
     ]
   },
+   {
+    'id': 27,
+    'title': '21WN',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 321.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/Rectangle 321.png',
+      'images/Rectangle 321.png',
+      'images/Rectangle 321.png',
+    ]
+  },
+   {
+    'id': 28,
+    'title': '21WN',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 321 (2).png',
+    'clothType': 'ring',
+    'image2': [
+      'images/Rectangle 321 (2).png',
+      'images/Rectangle 321 (2).png',
+      'images/Rectangle 321 (2).png',
+    ]
+  },
+    {
+    'id': 29,
+    'title': '21WN',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 321 (1).png',
+    'clothType': 'ring',
+    'image2': [
+      'images/Rectangle 321 (1).png',
+      'images/Rectangle 321 (1).png',
+      'images/Rectangle 321 (1).png',
+    ]
+  },
+     {
+    'id': 30,
+    'title': '21WN',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/Rectangle 321.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/Rectangle 321.png',
+      'images/Rectangle 321.png',
+      'images/Rectangle 321.png',
+    ]
+  },
 ];

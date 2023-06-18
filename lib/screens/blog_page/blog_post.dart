@@ -14,8 +14,9 @@ class BlogPost extends StatelessWidget {
       drawer: HomeDrawer(),
       appBar: MyAppBar(appBar: AppBar()),
       body: SafeArea(
-          child: Column(
+          child: ListView(
         children: [
+          SizedBox(height: 10.h),
           SizedBox(
             width: double.infinity,
             child: Image.asset(
@@ -27,6 +28,7 @@ class BlogPost extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   blogPost[currentIndex]['title'].toUpperCase(),
@@ -44,6 +46,24 @@ class BlogPost extends StatelessWidget {
                     fontSize: 14.sp,
                   ),
                 ),
+                SizedBox(height: 10.h),
+                SizedBox(
+                  width: double.infinity,
+                  height: 450.h,
+                  child: Image.asset('images/image 14.png'),
+                ),
+                SizedBox(height: 30.h),
+                Text(
+                  'I found this Saint Laurent canvas handbag this summer and immediately fell in love. The neutral fabrics are so beautiful and I like how this handbag can also carry into fall. The mini Fendi bucket bag with the sheer fabric is so fun and such a statement bag. Also this DeMellier off white bag is so cute to carry to a dinner with you or going out, it’s small but not too small to fit your phone and keys still.',
+                  style: TextStyle(
+                    height: 2.h,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14.sp,
+                  ),
+                ),
+                SizedBox(height: 20.h),
+                Text('Posted by OpenFashion | 3 Days ago'),
+                SizedBox(height: 30.h),
               ],
             ),
           )

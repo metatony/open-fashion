@@ -11,31 +11,6 @@ class NotifierState extends ChangeNotifier {
 
   List menuTab = ['WOMEN', 'MAN', 'KIDS'];
 
-  //just for you product list carousel
-
-  List justForYou = [
-    {
-      'title': 'Harris Tweed Three button Jacket',
-      'price': '\$120',
-      'image': 'images/Rectangle 321.png',
-    },
-    {
-      'title': 'Cashmere Blend Cropped Jacket SW1WJ285-AM',
-      'price': '\$120',
-      'image': 'images/Rectangle 321 (2).png',
-    },
-    {
-      'title': 'Harris Tweed Three-button Jacket',
-      'price': '\$120',
-      'image': 'images/Rectangle 321 (1).png',
-    },
-    {
-      'title': '1WN reversible angora cardigan SW1WJ285-AM',
-      'price': '\$120',
-      'image': 'images/Rectangle 321.png',
-    }
-  ];
-
   //dropdown menu list
 
   List menuList = ['New', 'Apparel', 'Bag', 'Shoes', 'Beauty', 'Accessories'];
@@ -67,9 +42,6 @@ class NotifierState extends ChangeNotifier {
     }
     return totalPrice.toString();
   }
-
-  //to control text widget display when cart is empty
-  int cartEmpty = 0;
 
   List indicator = ['', '', ''];
 }

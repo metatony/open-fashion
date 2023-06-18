@@ -65,6 +65,7 @@ class _ProductPageState extends State<ProductPage> {
                 SizedBox(height: 15.h),
                 ProductBody(
                   addtobasket: widget.categoryIndex,
+                  
                 )
               ],
             ),

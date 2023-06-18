@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:open_fashion/screens/product%20page/product_materials.dart';
+
 import '../../../utilities/exports.dart';
 
 class JustForYou extends StatefulWidget {
@@ -24,12 +26,23 @@ class _JustForYouState extends State<JustForYou> {
             CarouselSlider(
               items: [
                 ...List.generate(
-                  value.justForYou.length,
+                  categoryItems.getRange(27, 31).length,
                   (index) {
+                    int itemIndex = 27 + index;
                     return Product(
-                      image: value.justForYou[index]['image'],
-                      title: value.justForYou[index]['title'],
-                      price: value.justForYou[index]['price'],
+                      image: categoryItems[itemIndex]['image'],
+                      title: categoryItems[itemIndex]['title'],
+                      price: categoryItems[itemIndex]['price'],
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                            duration: Duration(milliseconds: 250),
+                            type: PageTransitionType.bottomToTop,
+                            child: ProductPage(categoryIndex: itemIndex),
+                          ),
+                        );
+                      },
                     );
                   },
                 ).toList(),
@@ -52,7 +65,7 @@ class _JustForYouState extends State<JustForYou> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ...List.generate(value.justForYou.length, (index) {
+                ...List.generate(allList.length, (index) {
                   return pageDot(index: index);
                 })
               ],
@@ -66,13 +79,14 @@ class _JustForYouState extends State<JustForYou> {
 }
 
 Consumer<Object?> pageDot({required int index}) {
-  return Consumer <NotifierState>(
+  return Consumer<NotifierState>(
     builder: (BuildContext context, value, Widget? child) => AnimatedContainer(
       margin: EdgeInsets.only(right: 6.w),
       height: 8.h,
       width: 8.w,
       decoration: BoxDecoration(
-        color: value.selectedImage == index ? Colors.orange : Colors.transparent,
+        color:
+            value.selectedImage == index ? Colors.orange : Colors.transparent,
         borderRadius: BorderRadius.circular(6.r),
         border: value.selectedImage == index
             ? Border.all(color: Colors.transparent)

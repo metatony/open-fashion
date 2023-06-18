@@ -7,42 +7,45 @@ class Product extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    required this.price,
+    required this.price, this.onTap,
   });
 
   final String image;
   final String title;
   final String price;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: 10.w),
-      child: SizedBox(
-        width: 255.w,
-        //height: 350.h,
-        child: Column(
-          children: [
-            Expanded(
-              child: Image.asset(image, fit: BoxFit.cover ),
-            ),
-            SizedBox(height: 4.h),
-            Wrap(
-              
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(fontSize: 16.sp),
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-            Text(
-              price,
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Color(0xffDD8560), fontSize: 16.sp),
-            ),
-          ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: EdgeInsets.only(left: 10.w),
+        child: SizedBox(
+          width: 255.w,
+          //height: 350.h,
+          child: Column(
+            children: [
+              Expanded(
+                child: Image.asset(image, fit: BoxFit.cover),
+              ),
+              SizedBox(height: 4.h),
+              Wrap(
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontSize: 16.sp),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              Text(
+                '\$' + price,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Color(0xffDD8560), fontSize: 16.sp),
+              ),
+            ],
+          ),
         ),
       ),
     );

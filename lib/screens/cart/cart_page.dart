@@ -127,7 +127,7 @@ class Cart extends StatelessWidget {
                 ),
                 SizedBox(width: 24.w),
                 Text(
-                    value.cartItems.length != value.cartEmpty
+                    value.cartItems.isNotEmpty
                         ? 'BUY NOW'
                         : 'CONTINUE SHOPPING',
                     style: TextStyle(

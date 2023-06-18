@@ -33,7 +33,7 @@ class DetailsForm extends StatelessWidget {
                   keyboardType: TextInputType.name,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   validator: (value) => value == null || value.isEmpty
-                      ? 'Please enter your name'
+                      ? 'enter your name'
                       : null,
                   decoration: InputDecoration(
                     hintText: 'First name',
@@ -49,7 +49,7 @@ class DetailsForm extends StatelessWidget {
                   keyboardType: TextInputType.name,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   validator: (value) => value == null || value.isEmpty
-                      ? 'Please enter your lastname'
+                      ? 'enter your lastname'
                       : null,
                   decoration: InputDecoration(
                     hintText: 'Last name',
@@ -63,10 +63,10 @@ class DetailsForm extends StatelessWidget {
             controller: addressController,
             keyboardType: TextInputType.streetAddress,
             validator: (value) => value == null || value.isEmpty
-                ? 'Please enter your address'
+                ? 'enter your delivery address'
                 : null,
             decoration: InputDecoration(
-              hintText: 'Address',
+              hintText: 'House address',
             ),
           ),
           SizedBox(height: 20.h),
@@ -75,10 +75,10 @@ class DetailsForm extends StatelessWidget {
             keyboardType: TextInputType.emailAddress,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: (value) => value == null || value.isEmpty
-                ? 'Please enter a your city'
+                ? 'enter a your email'
                 : null,
             decoration: InputDecoration(
-              hintText: 'City',
+              hintText: 'Email address',
             ),
           ),
           SizedBox(height: 20.h),
@@ -87,7 +87,7 @@ class DetailsForm extends StatelessWidget {
             keyboardType: TextInputType.number,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: (value) => value == null || value.isEmpty
-                ? 'Please enter your phone number'
+                ? 'enter your phone number'
                 : null,
             decoration: InputDecoration(
               hintText: 'Phone number',
