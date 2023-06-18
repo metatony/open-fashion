@@ -2,6 +2,14 @@
 
 A new Flutter project.
 
+## Features
+
+- [x] View available product.
+- [x] Add a product to cart.
+- [x] Increment and decrement cart item quantity.
+- [x] Checkout 
+- [x] Search for product
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
