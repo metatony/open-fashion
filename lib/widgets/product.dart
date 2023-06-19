@@ -8,8 +8,10 @@ class Products extends StatelessWidget {
     required this.price,
     required this.image,
     required this.onPressed,
+    required this.color,
   });
   final String title, price, image;
+  final Color color;
   final Function()? onPressed;
 
   @override
@@ -24,18 +26,20 @@ class Products extends StatelessWidget {
             child: GestureDetector(
                 onTap: onPressed, child: Image.asset(image, fit: BoxFit.cover)),
           ),
-          SizedBox(height: 4.h),
+          SizedBox(height: 8.h),
           Wrap(
             children: [
               Text(
                 title,
                 style: TextStyle(
+                  color: color,
                     fontWeight: FontWeight.w400,
                     height: 1.2.h,
                     fontSize: 12.sp),
               ),
             ],
           ),
+          SizedBox(height: 5.h),
           Text('\$' + price,
               style: TextStyle(
                   fontWeight: FontWeight.w400,

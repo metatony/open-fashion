@@ -435,4 +435,117 @@ List<Map<String, dynamic>> categoryItems = [
       'images/Rectangle 321.png',
     ]
   },
+  {
+    'id': 31,
+    'title': 'Octo',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame9.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame9.png',
+      'images/frame9.png',
+      'images/frame9.png',
+    ]
+  },
+   {
+    'id': 32,
+    'title': 'Octo',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame2.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame2.png',
+      'images/frame2.png',
+      'images/frame2.png',
+    ]
+  },
+   {
+    'id': 33,
+    'title': 'Octo',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame10.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame10.png',
+      'images/frame10.png',
+      'images/frame10.png',
+    ]
+  },
+   {
+    'id': 34,
+    'title': 'Octo',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame4.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame4.png',
+      'images/frame4.png',
+      'images/frame4.png',
+    ]
+  },
+   {
+    'id': 35,
+    'title': 'Octo',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame5.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame5.png',
+      'images/frame5.png',
+      'images/frame5.png',
+    ]
+  },
+   {
+    'id': 36,
+    'title': 'Octo',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame6.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame6.png',
+      'images/frame6.png',
+      'images/frame6.png',
+    ]
+  },
+   {
+    'id': 37,
+    'title': 'BLACK COLLECTION',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame7.png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame7.png',
+      'images/frame7.png',
+      'images/frame7.png',
+    ]
+  },
+   {
+    'id': 38,
+    'title': 'HAE BY HAEKIM',
+    'body': 'Recycle Boucle Knit Cardigan Pink',
+    'price': '120',
+    'rating': '4.8 Ratings',
+    'image': 'images/frame8 (2).png',
+    'clothType': 'ring',
+    'image2': [
+      'images/frame8 (2).png',
+      'images/frame8 (2).png',
+      'images/frame8 (2).png',
+    ]
+  },
+
 ];

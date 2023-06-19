@@ -3,14 +3,23 @@
 import '../utilities/exports.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({super.key, required this.appBar});
+  const MyAppBar(
+      {super.key,
+      required this.appBar,
+      required this.iconColor,
+      required this.bgColor,
+      required this.logo,
+      required this.searchColor});
 
   final AppBar appBar;
+  final Color iconColor, searchColor, bgColor;
+  final String logo;
 
   @override
   Widget build(BuildContext context) {
     return Consumer<NotifierState>(
       builder: (context, value, child) => AppBar(
+        backgroundColor: bgColor,
         automaticallyImplyLeading: false,
         centerTitle: true,
         elevation: 0,
@@ -19,12 +28,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: ImageIcon(AssetImage('images/Menu.png'), color: Colors.black),
+            icon: ImageIcon(AssetImage('images/Menu.png'), color: iconColor),
           ),
         ),
-        title: Image.asset('images/Logo.png'),
+        title: Image.asset(logo),
         actions: [
-          SearchIcon(),
+          SearchIcon(
+            searchColor: iconColor,
+          ),
           Stack(
             alignment: Alignment.center,
             children: [
@@ -41,7 +52,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   },
                   icon: ImageIcon(
                     AssetImage('images/shopping bag.png'),
-                    color: Color.fromARGB(255, 26, 25, 25),
+                    color: iconColor,
                   )),
               if (value.cartItems.length != 0)
                 Positioned(

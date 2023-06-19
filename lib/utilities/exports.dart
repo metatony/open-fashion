@@ -39,3 +39,5 @@ export 'package:open_fashion/widgets/checkout_button.dart';
 export 'package:open_fashion/screens/product%20page/addtobasket.dart';
 export 'package:open_fashion/models/product_list.dart';
 export 'package:open_fashion/models/product_recomend.dart';
+export 'package:open_fashion/screens/home_page/collections/coll_pro.dart';
+export 'package:open_fashion/screens/home_page/collections/for_you.dart';

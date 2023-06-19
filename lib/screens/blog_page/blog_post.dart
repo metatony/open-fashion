@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/models/List.dart';
 import 'package:open_fashion/utilities/exports.dart';
 
 class BlogPost extends StatelessWidget {
@@ -12,7 +11,7 @@ class BlogPost extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: HomeDrawer(),
-      appBar: MyAppBar(appBar: AppBar()),
+      appBar: MyAppBar(appBar: AppBar(), bgColor: Color(0xffE7EAEF), iconColor: Color.fromARGB(255, 26, 25, 25), logo: 'images/Logo.png', searchColor: Color.fromARGB(255, 26, 25, 25)),
       body: SafeArea(
           child: ListView(
         children: [

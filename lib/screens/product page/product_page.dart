@@ -18,7 +18,7 @@ class _ProductPageState extends State<ProductPage> {
 
     return Scaffold(
         drawer: HomeDrawer(),
-        appBar: MyAppBar(appBar: AppBar()),
+        appBar: MyAppBar(appBar: AppBar(), bgColor: Color(0xffE7EAEF), iconColor: Color.fromARGB(255, 26, 25, 25), logo: 'images/Logo.png', searchColor: Color.fromARGB(255, 26, 25, 25)),
         body: SafeArea(
           child: Consumer<NotifierState>(
             builder: (BuildContext context, value, child) => ListView(

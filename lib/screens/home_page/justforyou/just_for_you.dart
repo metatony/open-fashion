@@ -20,7 +20,7 @@ class _JustForYouState extends State<JustForYou> {
       child: Consumer<NotifierState>(
         builder: (BuildContext context, value, Widget? child) => Column(
           children: [
-            HeaderTitle(header: 'JUST FOR YOU'),
+            HeaderTitle(header: 'JUST FOR YOU', color: Colors.white,),
             Div(),
             SizedBox(height: 23.h),
             CarouselSlider(

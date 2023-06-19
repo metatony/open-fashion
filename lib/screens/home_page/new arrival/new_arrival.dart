@@ -43,12 +43,11 @@ class NewArrival extends StatelessWidget {
                         duration: Duration(milliseconds: 300),
                         type: PageTransitionType.leftToRight,
                         child: ProductPage(
-                          //key: ValueKey(categoryItems[index]['id']),
                           categoryIndex: index,
                         ),
                       ),
                     );
-                  },
+                  }, color: Colors.black,
                 );
               })
             ],

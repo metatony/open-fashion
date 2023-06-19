@@ -10,14 +10,14 @@ class BlogPage extends StatelessWidget {
     return Scaffold(
       drawer: HomeDrawer(),
       appBar: MyAppBar(
-        appBar: AppBar(),
+        appBar: AppBar(), bgColor: Color(0xffE7EAEF), iconColor: Color.fromARGB(255, 26, 25, 25), logo: 'images/Logo.png', searchColor: Color.fromARGB(255, 26, 25, 25),
       ),
       body: SafeArea(
           child: Consumer<NotifierState>(
         builder: (context, value, child) => Column(
           children: [
             SizedBox(height: 29.h),
-            HeaderTitle(header: 'BLOG'),
+            HeaderTitle(header: 'BLOG', color: Colors.white,),
             Div(),
             SizedBox(height: 20.h),
             SingleChildScrollView(
