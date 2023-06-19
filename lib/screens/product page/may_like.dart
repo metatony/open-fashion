@@ -15,7 +15,7 @@ class YouMayLike extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
-          HeaderTitle(header: 'YOU MAY ALSO LIKE', color: Colors.white,),
+          HeaderTitle(header: 'YOU MAY ALSO LIKE', color: Colors.black,),
           SizedBox(height: 5.h),
           Div(),
           SizedBox(height: 10.h),

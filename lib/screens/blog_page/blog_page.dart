@@ -17,7 +17,7 @@ class BlogPage extends StatelessWidget {
         builder: (context, value, child) => Column(
           children: [
             SizedBox(height: 29.h),
-            HeaderTitle(header: 'BLOG', color: Colors.white,),
+            HeaderTitle(header: 'BLOG', color: Colors.black,),
             Div(),
             SizedBox(height: 20.h),
             SingleChildScrollView(

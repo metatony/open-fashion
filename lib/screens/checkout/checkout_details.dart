@@ -24,7 +24,7 @@ class _CheckoutDetailsState extends State<CheckoutDetails> {
           child: ListView(
             children: [
               SizedBox(height: 33.h),
-              Center(child: HeaderTitle(header: 'ADD SHIPPING ADDRESS', color: Colors.white,)),
+              Center(child: HeaderTitle(header: 'ADD SHIPPING ADDRESS', color: Colors.black,)),
               SizedBox(height: 15.h),
               Center(child: Div()),
               SizedBox(height: 26.h),
