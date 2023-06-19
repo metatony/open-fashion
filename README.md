@@ -16,4 +16,4 @@ New features coming soon
 |--|--|
 <img src = "https://github.com/metatony/open-fashion/assets/98693285/36ec1d4e-e4cb-4806-aa9e-9e8dc9a38680" style="max-width: 50%">| <img src = "https://github.com/metatony/open-fashion/assets/98693285/35622b1b-fe57-4e04-a3e2-f36e53a51da4" style="max-width: 50%">
 ||
-<img src = "https://github.com/metatony/open-fashion/assets/98693285/452e44cc-c32c-424f-b720-141c4e2f50fb" style="max-width: 50%">| <img src = "https://github.com/metatony/open-fashion/assets/98693285/6169561e-fecc-41c0-acdc-6b0e81405042" style="max-width: 50%"> 
+<img src = "https://github.com/metatony/open-fashion/assets/98693285/452e44cc-c32c-424f-b720-141c4e2f50fb" style="max-width: 50%">| <img src = "https://github.com/metatony/open-fashion/assets/98693285/8e2fd33f-c71f-4dae-9084-9cf054cc2cbd" style="max-width: 50%"> 
