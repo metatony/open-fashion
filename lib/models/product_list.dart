@@ -442,7 +442,7 @@ List<Map<String, dynamic>> categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/frame9.png',
-    'clothType': 'ring',
+    'clothType': 'dress',
     'image2': [
       'images/frame9.png',
       'images/frame9.png',
@@ -456,7 +456,7 @@ List<Map<String, dynamic>> categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/frame2.png',
-    'clothType': 'ring',
+    'clothType': 'shoe',
     'image2': [
       'images/frame2.png',
       'images/frame2.png',
@@ -484,7 +484,7 @@ List<Map<String, dynamic>> categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/frame4.png',
-    'clothType': 'ring',
+    'clothType': 'earring',
     'image2': [
       'images/frame4.png',
       'images/frame4.png',
@@ -526,7 +526,7 @@ List<Map<String, dynamic>> categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/frame7.png',
-    'clothType': 'ring',
+    'clothType': 'dress',
     'image2': [
       'images/frame7.png',
       'images/frame7.png',
@@ -540,7 +540,7 @@ List<Map<String, dynamic>> categoryItems = [
     'price': '120',
     'rating': '4.8 Ratings',
     'image': 'images/frame8 (2).png',
-    'clothType': 'ring',
+    'clothType': 'dress',
     'image2': [
       'images/frame8 (2).png',
       'images/frame8 (2).png',

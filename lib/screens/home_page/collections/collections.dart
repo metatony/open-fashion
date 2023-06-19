@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:open_fashion/screens/home_page/collections/collection_page.dart';
+
 import '../../../utilities/exports.dart';
 
 class Collections extends StatelessWidget {
@@ -8,7 +12,15 @@ class Collections extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          PageTransition(
+              duration: Duration(milliseconds: 250),
+              type: PageTransitionType.fade,
+              child: CollectionPage()),
+        );
+      },
       child: SizedBox(
         child: Column(
           children: [
