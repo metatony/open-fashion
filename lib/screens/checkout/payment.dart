@@ -36,7 +36,7 @@ class _PaymentState extends State<Payment> {
 
   // NotifierState provider = NotifierState();
 
-  // var publicKey = 'pk_test_d22ca58c65712b64bdca3b374749aa32555a8496';
+  // var publicKey = 'pk_test_xxx';
 
   // final plugin = PaystackPlugin();
   // String message = '';
