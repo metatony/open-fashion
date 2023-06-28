@@ -1,5 +1,5 @@
-
 // ignore_for_file: prefer_const_constructors
+
 
 import '../../utilities/exports.dart';
 
@@ -8,7 +8,6 @@ TextEditingController lastNameController = TextEditingController();
 TextEditingController addressController = TextEditingController();
 TextEditingController phoneController = TextEditingController();
 TextEditingController emailController = TextEditingController();
-
 
 class DetailsForm extends StatelessWidget {
   const DetailsForm({
@@ -32,9 +31,8 @@ class DetailsForm extends StatelessWidget {
                   controller: firstNameController,
                   keyboardType: TextInputType.name,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
-                  validator: (value) => value == null || value.isEmpty
-                      ? 'enter your name'
-                      : null,
+                  validator: (value) =>
+                      value == null || value.isEmpty ? 'enter your name' : null,
                   decoration: InputDecoration(
                     hintText: 'First name',
                   ),
@@ -74,9 +72,8 @@ class DetailsForm extends StatelessWidget {
             controller: emailController,
             keyboardType: TextInputType.emailAddress,
             autovalidateMode: AutovalidateMode.onUserInteraction,
-            validator: (value) => value == null || value.isEmpty
-                ? 'enter a your email'
-                : null,
+            validator: (value) =>
+                value == null || value.isEmpty ? 'enter a your email' : null,
             decoration: InputDecoration(
               hintText: 'Email address',
             ),
@@ -93,6 +90,7 @@ class DetailsForm extends StatelessWidget {
               hintText: 'Phone number',
             ),
           ),
+        
         ],
       ),
     );

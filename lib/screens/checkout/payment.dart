@@ -2,6 +2,7 @@
 
 
 import 'package:open_fashion/utilities/exports.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 class Payment extends StatefulWidget {
   Payment({super.key});
@@ -12,16 +13,26 @@ class Payment extends StatefulWidget {
 
 class _PaymentState extends State<Payment> {
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        children: [],
+        children: [
+          
+        ],
       )),
     );
   }
 }
+
+
+
+
+
+
 
   // NotifierState provider = NotifierState();
 
