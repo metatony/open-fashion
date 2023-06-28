@@ -46,7 +46,7 @@ class _CheckoutDetailsState extends State<CheckoutDetails> {
                 ));
           }
         },
-        cta: 'ADD NOW',
+        cta: 'PROCEED TO PAYMENT',
       ),
     );
   }

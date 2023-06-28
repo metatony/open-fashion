@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:open_fashion/screens/blog_page/blog_page.dart';
-import 'package:open_fashion/screens/category/category.dart';
 
 import '../../../utilities/exports.dart';
 
@@ -63,17 +62,6 @@ class HomeDrawer extends StatelessWidget {
                   textAlign: TextAlign.start,
                 ),
               ),
-
-              TextButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Category()));
-                },
-                child: Text(
-                  'Blog',
-                  textAlign: TextAlign.start,
-                ),
-              )
             ],
           ),
         ),
