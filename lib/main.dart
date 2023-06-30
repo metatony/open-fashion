@@ -5,11 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'utilities/exports.dart';
 
 void main() {
-
   runApp(
     DevicePreview(
       builder: (context) => MyApp(),
-      enabled: false,
+      enabled: true,
     ),
   );
 }
@@ -22,6 +21,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (BuildContext context) => NotifierState(),
       child: ScreenUtilInit(
+        useInheritedMediaQuery: true,
         designSize: Size(390, 844),
         builder: (BuildContext context, child) {
           return MaterialApp(
@@ -34,7 +34,9 @@ class MyApp extends StatelessWidget {
                     )),
                 fontFamily: GoogleFonts.tenorSans().fontFamily),
             debugShowCheckedModeBanner: false,
-            home: HomePage(),
+            home: Scaffold(
+              body: HomePage(),
+            ),
           );
         },
       ),

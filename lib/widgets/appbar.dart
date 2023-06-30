@@ -54,7 +54,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                     AssetImage('images/shopping bag.png'),
                     color: iconColor,
                   )),
-              if (value.cartItems.length != 0)
+              if (value.cartItems.isNotEmpty)
                 Positioned(
                   top: 3,
                   right: 20,
