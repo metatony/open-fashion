@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/screens/cart/cart_counter.dart';
+import 'package:open_fashion/screens/cart/components/cart_counter.dart';
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 class CartContainer extends StatelessWidget {
   CartContainer({

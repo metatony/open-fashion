@@ -2,7 +2,7 @@
 
 import 'package:open_fashion/screens/product%20page/product_page.dart';
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 class YouMayLike extends StatelessWidget {
   const YouMayLike({
@@ -15,7 +15,10 @@ class YouMayLike extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
-          HeaderTitle(header: 'YOU MAY ALSO LIKE', color: Colors.black,),
+          HeaderTitle(
+            header: 'YOU MAY ALSO LIKE',
+            color: Colors.black,
+          ),
           SizedBox(height: 5.h),
           Div(),
           SizedBox(height: 10.h),
@@ -25,12 +28,13 @@ class YouMayLike extends StatelessWidget {
             spacing: 13.w,
             children: [
               ...List.generate(
-                allList.length,
+                categoryItems.getRange(21, 25).length,
                 (index) {
+                  int itemIndex = 21 + index;
                   return Products(
-                    title: recommend[index]['title'],
-                    price: recommend[index]['price'],
-                    image: recommend[index]['image'],
+                    title: categoryItems[itemIndex]['title'],
+                    price: categoryItems[itemIndex]['price'],
+                    image: categoryItems[itemIndex]['image'],
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -43,7 +47,8 @@ class YouMayLike extends StatelessWidget {
                           ),
                         ),
                       );
-                    }, color: Colors.black,
+                    },
+                    color: Colors.black,
                   );
                 },
               ),

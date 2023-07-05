@@ -2,7 +2,7 @@
 
 import 'package:open_fashion/screens/product%20page/product_page.dart';
 
-import '../../../utilities/exports.dart';
+import '../../../../utilities/exports.dart';
 
 class CollectionProducts extends StatelessWidget {
   const CollectionProducts({

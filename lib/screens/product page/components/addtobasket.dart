@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 class AddToBasket extends StatelessWidget {
   const AddToBasket({
-    super.key, required this.index,
+    super.key,
+    required this.index,
   });
 
   final int index;
@@ -12,21 +13,20 @@ class AddToBasket extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<NotifierState>(
-      builder: (BuildContext context, value, child) => Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
-        height: 60.h,
-        width: double.infinity,
-        color: Colors.black,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              child: GestureDetector(
-                onTap: () {
-                  Provider.of<NotifierState>(context, listen: false)
-                      .addToCart(index);
-                },
+      builder: (BuildContext context, value, child) => GestureDetector(
+        onTap: () {
+          Provider.of<NotifierState>(context, listen: false).addToCart(index);
+        },
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          height: 60.h,
+          width: double.infinity,
+          color: Colors.black,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -45,12 +45,12 @@ class AddToBasket extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-            Icon(
-              Icons.favorite_outline_rounded,
-              color: Colors.white,
-            )
-          ],
+              Icon(
+                Icons.favorite_outline_rounded,
+                color: Colors.white,
+              )
+            ],
+          ),
         ),
       ),
     );

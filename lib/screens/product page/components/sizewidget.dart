@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors,
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 // ignore: must_be_immutable
 class ProductSizeWidget extends StatelessWidget {

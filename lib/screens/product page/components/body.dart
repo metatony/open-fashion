@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 import 'product_materials.dart';
 
 class ProductBody extends StatefulWidget {

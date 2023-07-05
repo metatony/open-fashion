@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 export 'package:open_fashion/screens/product%20page/product_page.dart';
-import 'package:open_fashion/screens/product%20page/may_like.dart';
+import 'package:open_fashion/screens/product%20page/components/may_like.dart';
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 class ProductMaterials extends StatelessWidget {
   const ProductMaterials({

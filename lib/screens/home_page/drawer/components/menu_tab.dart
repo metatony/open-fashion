@@ -1,9 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:provider/provider.dart';
 
-import '../../../utilities/exports.dart';
+import '../../../../utilities/exports.dart';
 
-class HomeTab extends StatelessWidget {
-  const HomeTab({
+class MenuTab extends StatelessWidget {
+  const MenuTab({
     super.key,
   });
 
@@ -13,22 +15,21 @@ class HomeTab extends StatelessWidget {
       builder: (BuildContext context, value, child) => TabBar(
         labelPadding: EdgeInsets.symmetric(horizontal: 1.w),
         labelColor: Colors.black,
-        unselectedLabelColor: const Color(0xff888888),
+        unselectedLabelColor: Color(0xff888888),
         tabs: [
           ...List.generate(
-            value.tab.length,
+            value.menuTab.length,
             (index) {
               return Tab(
-                text: value.tab[index],
+                text: value.menuTab[index],
               );
             },
           ),
         ],
-        indicator: DotIndicator(
-          color: Colors.orange,
-          radius: 3.r,
-          distanceFromCenter: 16.h,
-          paintingStyle: PaintingStyle.fill,
+        indicator: UnderlineTabIndicator(
+          borderSide: BorderSide(
+            color: Colors.orange,
+          ),
         ),
       ),
     );

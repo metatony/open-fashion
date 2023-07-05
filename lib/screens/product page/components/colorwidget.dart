@@ -1,4 +1,4 @@
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 // ignore: must_be_immutable
 class ProductColorWidget extends StatelessWidget {

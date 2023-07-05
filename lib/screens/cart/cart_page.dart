@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-import 'package:open_fashion/screens/cart/cart_container.dart';
+import 'package:open_fashion/screens/cart/components/cart_container.dart';
 import 'package:open_fashion/screens/checkout/checkout_details.dart';
 import 'package:open_fashion/utilities/exports.dart';
 

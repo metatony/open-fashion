@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/screens/blog_page/blog_post.dart';
+import 'package:open_fashion/screens/blog_page/components/blog_post.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../../utilities/exports.dart';
+import '../../../utilities/exports.dart';
 
 class BlogContainer extends StatelessWidget {
   BlogContainer({

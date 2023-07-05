@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:open_fashion/screens/product%20page/product_materials.dart';
+import 'package:open_fashion/screens/product%20page/components/product_materials.dart';
 
 import '../../../utilities/exports.dart';
 
