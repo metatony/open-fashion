@@ -1,32 +1,4 @@
-// ignore_for_file: prefer_const_constructors
 
-
-import 'package:open_fashion/utilities/exports.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
-
-class Payment extends StatefulWidget {
-  Payment({super.key});
-
-  @override
-  State<Payment> createState() => _PaymentState();
-}
-
-class _PaymentState extends State<Payment> {
-
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-          child: Column(
-        children: [
-          
-        ],
-      )),
-    );
-  }
-}
 
 
 

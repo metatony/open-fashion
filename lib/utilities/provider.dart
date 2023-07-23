@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_final_fields
 
+
 import 'package:open_fashion/utilities/exports.dart';
 
 class NotifierState extends ChangeNotifier {
@@ -22,6 +23,7 @@ class NotifierState extends ChangeNotifier {
   //list of cart items
   List cartItems = [];
 
+
   //add items to cart
   void addToCart(int index) {
     cartItems.add(categoryItems[index]);
@@ -35,13 +37,17 @@ class NotifierState extends ChangeNotifier {
   }
 
   //calculate total price
-  String calculateTotalPrice() {
+  int calculateTotalPrice() {
     int totalPrice = 0;
     for (int i = 0; i < cartItems.length; i++) {
       totalPrice += int.parse(cartItems[i]['price']);
     }
-    return totalPrice.toString();
+    return totalPrice;
   }
 
+
   List indicator = ['', '', ''];
+
+
+
 }

@@ -60,7 +60,7 @@ class Cart extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    '\$${value.calculateTotalPrice()}',
+                                    '\$${value.calculateTotalPrice().toString()}',
                                     style: TextStyle(
                                       letterSpacing: 2,
                                       fontSize: 16.sp,
