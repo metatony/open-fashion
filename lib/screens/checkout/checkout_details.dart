@@ -1,13 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
-//import 'package:flutter_paystack/flutter_paystack.dart';
-
 import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:open_fashion/screens/checkout/payment_sucess.dart';
 import 'package:open_fashion/utilities/exports.dart';
 
 class CheckoutDetails extends StatefulWidget {
-  const CheckoutDetails({super.key});
+  CheckoutDetails({super.key, required this.price});
+  String? price;
 
   @override
   State<CheckoutDetails> createState() => _CheckoutDetailsState();
@@ -15,9 +14,6 @@ class CheckoutDetails extends StatefulWidget {
 
 class _CheckoutDetailsState extends State<CheckoutDetails> {
   final _formKey = GlobalKey<FormState>();
-
-  //NotifierState provider = NotifierState();
-  final NotifierState provider = NotifierState();
 
   var publicKey = 'pk_test_xxx';
 
@@ -31,10 +27,8 @@ class _CheckoutDetailsState extends State<CheckoutDetails> {
   }
 
   void makePayments() async {
-    int price = 
-    provider.calculateTotalPrice();
     Charge charge = Charge()
-      ..amount = price
+      ..amount = int.parse(widget.price.toString()) * 100
       ..reference = 'ref_${DateTime.now()}'
       ..email = emailController.text
       ..currency = 'USD';

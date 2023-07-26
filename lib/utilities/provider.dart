@@ -37,12 +37,12 @@ class NotifierState extends ChangeNotifier {
   }
 
   //calculate total price
-  int calculateTotalPrice() {
+  String calculateTotalPrice() {
     int totalPrice = 0;
     for (int i = 0; i < cartItems.length; i++) {
       totalPrice += int.parse(cartItems[i]['price']);
     }
-    return totalPrice;
+    return totalPrice.toString();
   }
 
 

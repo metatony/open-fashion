@@ -4,7 +4,9 @@ import 'package:open_fashion/screens/checkout/checkout_details.dart';
 import 'package:open_fashion/utilities/exports.dart';
 
 class Cart extends StatelessWidget {
-  const Cart({super.key});
+  Cart({super.key});
+
+  String? price;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class Cart extends StatelessWidget {
                     return CartContainer(
                       image: value.cartItems[index]['image'],
                       body: value.cartItems[index]['body'],
-                      price: value.cartItems[index]['price'],
+                      price: price = value.cartItems[index]['price'],
                       title: value.cartItems[index]['title'],
                       index: index,
                     );
@@ -60,7 +62,7 @@ class Cart extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    '\$${value.calculateTotalPrice().toString()}',
+                                    '\$' + value.calculateTotalPrice(),
                                     style: TextStyle(
                                       letterSpacing: 2,
                                       fontSize: 16.sp,
@@ -105,7 +107,7 @@ class Cart extends StatelessWidget {
                 PageTransition(
                   duration: Duration(milliseconds: 250),
                   type: PageTransitionType.leftToRight,
-                  child: CheckoutDetails(),
+                  child: CheckoutDetails(price: price),
                 ),
               );
             } else {
