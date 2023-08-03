@@ -2,34 +2,20 @@
 
 import '../../../utilities/exports.dart';
 
-class ProductCounter extends StatefulWidget {
-  ProductCounter({super.key, required this.index});
+class ProductCounter extends StatelessWidget {
+   ProductCounter({
+    super.key,
+    required this.index,
+  });
 
   final int index;
 
-  @override
-  State<ProductCounter> createState() => _ProductCounterState();
-}
-
-class _ProductCounterState extends State<ProductCounter> {
   int item = 0;
 
-  int countNum = 1;
-
-  void minusCounter() {
-    countNum--;
-  }
-
-  void addCounter() {
-    countNum++;
-  }
 
   @override
   Widget build(BuildContext context) {
     return Consumer<NotifierState>(builder: (context, value, child) {
-      // int originalPrice = int.parse(value.cartItems[widget.index]['price']);
-      // int updatedPrice = originalPrice * countNum;
-
       return Row(
         children: [
           Card(
@@ -42,15 +28,13 @@ class _ProductCounterState extends State<ProductCounter> {
               ),
               child: GestureDetector(
                   onTap: () {
-                    setState(() {
-                      minusCounter();
-                    });
+                    value.decrement(index);
                   },
                   child: Icon(Icons.remove, size: 15)),
             ),
           ),
           SizedBox(width: 13.w),
-          Text(countNum.toString()),
+          Text(value.cartItems[index]['quantity'].toString()),
           SizedBox(width: 13.w),
           Card(
             shape: CircleBorder(),
@@ -62,11 +46,7 @@ class _ProductCounterState extends State<ProductCounter> {
               ),
               child: GestureDetector(
                   onTap: () {
-                    setState(() {
-                      addCounter();
-                      // value.cartItems[widget.index]['price'] =
-                      //     updatedPrice.toString();
-                    });
+                    value.increment(index);
                   },
                   child: Icon(Icons.add, size: 15)),
             ),
@@ -83,7 +63,7 @@ class _ProductCounterState extends State<ProductCounter> {
               child: GestureDetector(
                   onTap: () {
                     Provider.of<NotifierState>(context, listen: false)
-                        .removeItem(item);
+                        .removeItem(index);
                   },
                   child: Icon(Icons.close, size: 15)),
             ),
