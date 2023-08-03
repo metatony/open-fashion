@@ -37,7 +37,7 @@ class Cart extends StatelessWidget {
                     return CartContainer(
                       image: value.cartItems[index]['image'],
                       body: value.cartItems[index]['body'],
-                      price: price = value.cartItems[index]['price'],
+                      price: value.cartItems[index]['price'],
                       title: value.cartItems[index]['title'],
                       index: index,
                     );
@@ -62,7 +62,7 @@ class Cart extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    '\$' + value.calculateTotalPrice(),
+                                     '\$${price = value.calculateTotalPrice()}',
                                     style: TextStyle(
                                       letterSpacing: 2,
                                       fontSize: 16.sp,

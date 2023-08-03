@@ -5,7 +5,10 @@ import 'package:open_fashion/screens/checkout/payment_sucess.dart';
 import 'package:open_fashion/utilities/exports.dart';
 
 class CheckoutDetails extends StatefulWidget {
-  CheckoutDetails({super.key, required this.price});
+  CheckoutDetails({
+    super.key,
+    required this.price,
+  });
   String? price;
 
   @override
@@ -13,6 +16,7 @@ class CheckoutDetails extends StatefulWidget {
 }
 
 class _CheckoutDetailsState extends State<CheckoutDetails> {
+  NotifierState provider = NotifierState();
   final _formKey = GlobalKey<FormState>();
 
   var publicKey = 'pk_test_xxx';

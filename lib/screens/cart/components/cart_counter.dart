@@ -3,15 +3,12 @@
 import '../../../utilities/exports.dart';
 
 class ProductCounter extends StatelessWidget {
-   ProductCounter({
+   const ProductCounter({
     super.key,
     required this.index,
   });
 
   final int index;
-
-  int item = 0;
-
 
   @override
   Widget build(BuildContext context) {
